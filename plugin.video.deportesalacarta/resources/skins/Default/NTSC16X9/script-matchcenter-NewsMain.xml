@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window type="window">
+	<depth>0.52</depth>
+	<defaultcontrol always="true">32502</defaultcontrol>
+	<animation type="WindowOpen" reversible="false">
+		<effect type="zoom" start="80" end="100" center="960,540" delay="160" tween="back" time="240" />
+		<effect type="fade" delay="160" end="100" time="240" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="zoom" start="100" end="80" center="960,540" easing="in" tween="back" time="240" />
+		<effect type="fade" start="100" end="0" time="240" />
+	</animation>
+	<defaultcontrol always="true">32502</defaultcontrol>
+	<controls>
+		<control type="group">
+			<control type="group">
+				<left>60</left>
+				<top>10</top>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1058</width>
+					<height>642</height>
+					<texture border="2" colordiffuse="F2FE9A2E">MatchCenter/dialog-bg-solid-white.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1058</width>
+					<height>70</height>
+					<texture colordiffuse="FF12B2E7" border="2">MatchCenter/white70.png</texture>
+				</control>
+				<control type="label" id="32500">
+					<textoffsetx>70</textoffsetx>
+					<left>-30</left>
+					<top>0</top>
+					<width>869</width>
+					<height>70</height>
+					<font>font13_title</font>
+					<label>Noticias</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="radiobutton" id="32502">
+					<left>1039</left>
+					<top>11</top>
+					<width>48</width>
+					<height>48</height>
+					<radiowidth>48</radiowidth>
+					<radioheight>48</radioheight>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<label></label>
+					<ondown>32515</ondown>
+					<onright>32515</onright>
+					<animation effect="slide" end="-70,0" time="0" condition="true">Conditional</animation>
+					<textureradioofffocus colordiffuse="EEFFFFFF">MatchCenter/close.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="EEFFFFFF">MatchCenter/logo.png</textureradiooffnofocus>
+					<textureradioonfocus colordiffuse="EEFFFFFF">MatchCenter/close.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="EEFFFFFF">MatchCenter/logo.png</textureradioonnofocus>
+					<onclick>Action(close)</onclick>
+				</control>
+				<control type="button" id="32515">
+					<description>Anterior</description>
+					<left>50</left>
+					<top>60</top>
+					<width>370</width>
+					<height>65</height>
+					<label>Noticias Anteriores</label>
+					<texturefocus colordiffuse="EEF0FFFF">MatchCenter/button-nofo.png</texturefocus>
+					<texturenofocus>MatchCenter/button-nofo.png</texturenofocus>
+					<font>font13</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<focusedcolor>selected</focusedcolor>
+					<disabledcolor>disabled</disabledcolor>
+					<textoffsetx>7</textoffsetx>
+					<pulseonselect>no</pulseonselect>
+					<onleft>32502</onleft>
+					<onright>32516</onright>
+					<onup>32502</onup>
+					<ondown>32516</ondown>
+				</control>
+				<control type="button" id="32516">
+					<description>Siguiente</description>
+					<left>720</left>
+					<top>60</top>
+					<width>270</width>
+					<height>65</height>
+					<label>Más Noticias</label>
+					<texturefocus colordiffuse="EEF0FFFF">MatchCenter/button-nofo.png</texturefocus>
+					<texturenofocus>MatchCenter/button-nofo.png</texturenofocus>
+					<font>font13</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<focusedcolor>selected</focusedcolor>
+					<disabledcolor>disabled</disabledcolor>
+					<textoffsetx>7</textoffsetx>
+					<pulseonselect>no</pulseonselect>
+					<onleft>32515</onleft>
+					<onright>32501</onright>
+					<onup>32515</onup>
+					<ondown>32501</ondown>
+				</control>
+			</control>
+			<control type="group">
+				<visible>IsEmpty(Window(home).Property(loading-script-matchcenter-tables))</visible>
+				<control type="list" id="32501">
+					<left>-55</left>
+					<top>126</top>
+					<width>1037</width>
+					<height>525</height>
+					<onup>32516</onup>
+					<ondown>61</ondown>
+					<onright>61</onright>
+					<onleft>32516</onleft>
+					<pagecontrol>61</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<animation effect="slide" start="0,0" end="10,0" time="0" condition="!Control.IsVisible(61)">Conditional</animation>
+					<animation effect="slide" end="120,0" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
+					<itemlayout height="175" width="1037">
+						<control type="image">
+							<left>1</left>
+							<top>1</top>
+							<width>210</width>
+							<height>170</height>
+							<texture>$INFO[ListItem.Thumb]</texture>
+						</control>
+						<control type="textbox">
+							<description>Descripcion</description>
+							<posx>230</posx>
+							<posy>60</posy>
+							<width>800</width>
+							<height>100</height>
+							<label>$INFO[ListItem.Property(subtitle)]</label>
+							<font>font13</font>
+							<align>center</align>
+							<textcolor>FF0040FF</textcolor>
+						</control>
+						<control type="label">
+							<description>Titulo</description>
+							<posx>230</posx>
+							<posy>15</posy>
+							<width>800</width>
+							<height>35</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>font13_title</font>
+							<align>left</align>
+							<textcolor>black</textcolor>
+							<shadowcolor>AAF00000</shadowcolor>
+						</control>
+						<control type="label">
+							<description>Fecha</description>
+							<posx>830</posx>
+							<posy>145</posy>
+							<width>200</width>
+							<height>35</height>
+							<label>$INFO[ListItem.Property(date)]</label>
+							<align>left</align>
+							<font>font10</font>
+							<textcolor>black</textcolor>
+						</control>
+					</itemlayout>
+					<focusedlayout height="175" width="1037">
+						<control type="image">
+							<left>-20</left>
+							<top>-20</top>
+							<width>1074</width>
+							<height>215</height>
+							<texture border="40" colordiffuse="AA12B2E7">MatchCenter/button-fo.png</texture>
+							<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
+						</control>
+						<control type="textbox">
+							<description>Descripcion</description>
+							<posx>230</posx>
+							<posy>60</posy>
+							<width>800</width>
+							<height>100</height>
+							<label>$INFO[ListItem.Property(subtitle)]</label>
+							<font>font13</font>
+							<align>center</align>
+							<textcolor>FF0040FF</textcolor>
+						</control>
+						<control type="image">
+							<description>Imagen</description>
+							<left>1</left>
+							<top>1</top>
+							<width>210</width>
+							<height>170</height>
+							<texture>$INFO[ListItem.Thumb]</texture>
+						</control>
+						<control type="label">
+							<description>Título</description>
+							<posx>230</posx>
+							<posy>15</posy>
+							<width>800</width>
+							<height>35</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>font13_title</font>
+							<align>left</align>
+							<textcolor>black</textcolor>
+							<shadowcolor>AAF00000</shadowcolor>
+						</control>
+						<control type="label">
+							<description>Fecha</description>
+							<posx>830</posx>
+							<posy>145</posy>
+							<width>200</width>
+							<height>35</height>
+							<label>$INFO[ListItem.Property(date)]</label>
+							<font>font10</font>
+							<align>left</align>
+							<textcolor>black</textcolor>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="scrollbar" id="61">
+					<left>982</left>
+					<top>126</top>
+					<width>15</width>
+					<height>525</height>
+					<texturesliderbackground colordiffuse="29FFFFFF">MatchCenter/black.png</texturesliderbackground>
+					<texturesliderbar>MatchCenter/slidebar.png</texturesliderbar>
+					<texturesliderbarfocus colordiffuse="AAFFFFFF">MatchCenter/slidebar.png</texturesliderbarfocus>
+					<textureslidernib>-</textureslidernib>
+					<textureslidernibfocus>-</textureslidernibfocus>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+					<onleft>32501</onleft>
+					<onright>32501</onright>
+					<ondown>32501</ondown>
+					<onup>32501</onup>
+					<animation effect="slide" end="120,0" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,581 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window type="window">
+	<depth>0.52</depth>
+	<defaultcontrol always="true">32500</defaultcontrol>
+	<animation type="WindowOpen" reversible="false">
+		<effect type="zoom" start="80" end="100" center="960,540" delay="160" tween="back" time="240" />
+		<effect type="fade" delay="160" end="100" time="240" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="zoom" start="100" end="80" center="960,540" easing="in" tween="back" time="240" />
+		<effect type="fade" start="100" end="0" time="240" />
+	</animation>
+	<controls>
+		<control type="image" id="32502">
+			<left>159</left>
+			<top>50</top>
+			<width>965</width>
+			<height>566</height>
+			<visible>IsEmpty(Window(home).Property(loading-script-matchcenter-livescores))</visible>
+			<texture border="2">MatchCenter/dialog-bg-solid.png</texture>
+		</control>
+		<control type="group">
+			<control type="image">
+				<left>160</left>
+				<top>50</top>
+				<width>964</width>
+				<height>70</height>
+				<texture colordiffuse="FF12B2E7" border="10">MatchCenter/white70.png</texture>
+			</control>
+			<control type="textbox" id="33500">
+				<textoffsetx>70</textoffsetx>
+				<left>160</left>
+				<top>45</top>
+				<width>966</width>
+				<height>40</height>
+				<font>font13_title</font>
+				<label></label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="button" id="33501">
+				<left>170</left>
+				<top>45</top>
+				<width>200</width>
+				<height>40</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<onright>33502</onright>
+				<ondown>33502</ondown>
+				<texturefocus></texturefocus>
+				<texturenofocus></texturenofocus>
+				<focusedcolor>selected</focusedcolor>
+			</control>
+			<control type="button" id="33502">
+				<left>916</left>
+				<top>45</top>
+				<width>200</width>
+				<height>40</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<onleft>33501</onleft>
+				<onright>33503</onright>
+				<ondown>33503</ondown>
+				<onup>33501</onup>
+				<texturefocus></texturefocus>
+				<texturenofocus></texturenofocus>
+				<focusedcolor>selected</focusedcolor>
+			</control>
+			<control type="button" id="33503">
+				<left>370</left>
+				<top>90</top>
+				<width>155</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<onleft>33502</onleft>
+				<onright>33504</onright>
+				<ondown>33504</ondown>
+				<onup>33502</onup>
+				<label>Todos</label>
+				<texturefocus colordiffuse="FF088A08">http://i.imgur.com/TWyhzcH.png</texturefocus>
+				<texturenofocus colordiffuse="A0088A08">http://i.imgur.com/4vjgkwr.png</texturenofocus>
+				<disabledcolor>dimgray</disabledcolor>
+			</control>
+			<control type="button" id="33504">
+				<left>550</left>
+				<top>90</top>
+				<width>155</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<onleft>33503</onleft>
+				<onright>33505</onright>
+				<ondown>33505</ondown>
+				<onup>33502</onup>
+				<label>En Juego</label>
+				<texturefocus colordiffuse="FF088A08">http://i.imgur.com/TWyhzcH.png</texturefocus>
+				<texturenofocus colordiffuse="A0088A08">http://i.imgur.com/4vjgkwr.png</texturenofocus>
+				<disabledcolor>dimgray</disabledcolor>
+			</control>
+			<control type="button" id="33505">
+				<left>730</left>
+				<top>90</top>
+				<width>180</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<onleft>33504</onleft>
+				<onright>33506</onright>
+				<ondown>33506</ondown>
+				<onup>33502</onup>
+				<label>Sin comenzar</label>
+				<texturefocus colordiffuse="FF088A08">http://i.imgur.com/TWyhzcH.png</texturefocus>
+				<texturenofocus colordiffuse="A0088A08">http://i.imgur.com/4vjgkwr.png</texturenofocus>
+				<disabledcolor>dimgray</disabledcolor>
+			</control>
+			<control type="button" id="33506">
+				<left>935</left>
+				<top>90</top>
+				<width>175</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<onleft>33505</onleft>
+				<onright>32500</onright>
+				<ondown>32500</ondown>
+				<onup>33502</onup>
+				<label>Finalizados</label>
+				<texturefocus colordiffuse="FF088A08">http://i.imgur.com/TWyhzcH.png</texturefocus>
+				<texturenofocus colordiffuse="A0088A08">http://i.imgur.com/4vjgkwr.png</texturenofocus>
+				<disabledcolor>dimgray</disabledcolor>
+			</control>
+			<control type="group">
+				<control type="panel" id="32500">
+					<left>160</left>
+					<top>120</top>
+					<width>950</width>
+					<height>495</height>
+					<onup>33506</onup>
+					<ondown>61</ondown>
+					<onleft>33506</onleft>
+					<onright>61</onright>
+					<pagecontrol>61</pagecontrol>
+					<itemlayout height="165" width="945">
+						<control type="image">
+							<top>-20</top>
+							<left>-20</left>
+							<width>990</width>
+							<height>203</height>
+							<texture border="40">MatchCenter/button-nofo.png</texture>
+						</control>
+						<control type="image">
+							<top>5</top>
+							<left>197</left>
+							<width>745</width>
+							<height>150</height>
+							<texture border="10">MatchCenter/dialog-bg-solid-white.png</texture>
+						</control>
+						<control type="image">
+							<left>200</left>
+							<top>10</top>
+							<width>140</width>
+							<height>140</height>
+							<texture>$INFO[ListItem.Property(home_team_logo)]</texture>
+						</control>
+						<control type="image">
+							<left>800</left>
+							<top>10</top>
+							<width>140</width>
+							<height>140</height>
+							<texture>$INFO[ListItem.Property(away_team_logo)]</texture>
+						</control>
+						<control type="label">
+							<description>Time progress</description>
+							<posx>10</posx>
+							<posy>50</posy>
+							<width>140</width>
+							<height>40</height>
+							<label>$INFO[ListItem.Property(minute)]</label>
+							<font>font24_title</font>
+							<align>center</align>
+							<scroll>true</scroll>
+							<textcolor>gold</textcolor>
+							<shadowcolor>AA000000</shadowcolor>
+						</control>
+						<control type="label">
+							<description>Start Time</description>
+							<posx>20</posx>
+							<posy>125</posy>
+							<width>160</width>
+							<height>40</height>
+							<label>$INFO[ListItem.Property(starttime)]</label>
+							<font>font13_title</font>
+							<align>center</align>
+							<textcolor>grey</textcolor>
+							<shadowcolor>AA000000</shadowcolor>
+						</control>
+						<control type="progress">
+							<description>Progressbar</description>
+							<left>20</left>
+							<top>100</top>
+							<width>150</width>
+							<height>16</height>
+							<info>ListItem.Property(matchpercent)</info>
+							<texturebg border="3">MatchCenter/texturebg_border_white.png</texturebg>
+							<midtexture colordiffuse="FF12B2E7" border="3">MatchCenter/texturebg_white.png</midtexture>
+							<lefttexture>-</lefttexture>
+							<righttexture>-</righttexture>
+							<overlaytexture>-</overlaytexture>
+						</control>
+						<control type="image">
+							<left>160</left>
+							<top>57</top>
+							<width>30</width>
+							<height>30</height>
+							<texture>$INFO[ListItem.Property(status)]</texture>
+						</control>
+						<control type="label">
+							<description>League</description>
+							<posx>350</posx>
+							<posy>10</posy>
+							<width>450</width>
+							<height>40</height>
+							<label>$INFO[ListItem.Property(league_and_round)]</label>
+							<font>font13_title</font>
+							<align>center</align>
+							<textcolor>selected</textcolor>
+							<shadowcolor>AA000000</shadowcolor>
+						</control>
+						<control type="label">
+							<description>Result</description>
+							<posx>490</posx>
+							<posy>50</posy>
+							<width>180</width>
+							<height>40</height>
+							<label>$INFO[ListItem.Property(result)]</label>
+							<font>font_MainMenu</font>
+							<align>center</align>
+							<textcolor>black</textcolor>
+							<shadowcolor>AA000000</shadowcolor>
+						</control>
+						<control type="image">
+							<left>550</left>
+							<top>110</top>
+							<width>60</width>
+							<height>40</height>
+							<texture>$INFO[ListItem.Property(canal)]</texture>
+						</control>
+						<control type="textbox">
+							<description>Home Team</description>
+							<posx>350</posx>
+							<posy>47</posy>
+							<width>160</width>
+							<height>90</height>
+							<label>$INFO[ListItem.Property(hometeam_long)]</label>
+							<font>font24_title</font>
+							<align>center</align>
+							<textcolor>black</textcolor>
+							<shadowcolor>AA000000</shadowcolor>
+							<scroll>true</scroll>
+						</control>
+						<control type="textbox">
+							<description>Away Team</description>
+							<posx>640</posx>
+							<posy>47</posy>
+							<width>160</width>
+							<height>90</height>
+							<label>$INFO[ListItem.Property(awayteam_long)]</label>
+							<font>font24_title</font>
+							<align>center</align>
+							<textcolor>black</textcolor>
+							<shadowcolor>AA000000</shadowcolor>
+							<scroll>true</scroll>
+						</control>
+						<control type="image">
+							<description>Home Team goal</description>
+							<left>335</left>
+							<top>123</top>
+							<width>30</width>
+							<height>30</height>
+							<texture>$INFO[ListItem.Property(has_home_goals)]</texture>
+						</control>
+						<control type="label">
+							<description>Home Goal details</description>
+							<posx>370</posx>
+							<posy>125</posy>
+							<width>185</width>
+							<height>40</height>
+							<scroll>true</scroll>
+							<label>$INFO[ListItem.Property(home_goal_details)]</label>
+							<font>font12</font>
+							<align>left</align>
+							<textcolor>black</textcolor>
+							<shadowcolor>AA000000</shadowcolor>
+						</control>
+						<control type="image">
+							<description>Away Team goal</description>
+							<left>780</left>
+							<top>123</top>
+							<width>30</width>
+							<height>30</height>
+							<texture>$INFO[ListItem.Property(has_away_goals)]</texture>
+						</control>
+						<control type="label">
+							<description>Away Goal details</description>
+							<posx>590</posx>
+							<posy>125</posy>
+							<width>185</width>
+							<height>40</height>
+							<scroll>true</scroll>
+							<label>$INFO[ListItem.Property(away_goal_details)]</label>
+							<font>font12</font>
+							<align>right</align>
+							<textcolor>black</textcolor>
+							<shadowcolor>AA000000</shadowcolor>
+						</control>
+					</itemlayout>
+					<focusedlayout height="165" width="945">
+						<control type="image">
+							<top>-20</top>
+							<left>-20</left>
+							<width>990</width>
+							<height>205</height>
+							<texture border="40">MatchCenter/button-nofo.png</texture>
+							<animation effect="fade" start="0" end="100" time="0">Unfocus</animation>
+							<animation effect="fade" start="100" end="0" time="0">Focus</animation>
+						</control>
+						<control type="image">
+							<top>-20</top>
+							<left>-20</left>
+							<width>990</width>
+							<height>205</height>
+							<texture border="40" colordiffuse="FF12B2E7">MatchCenter/button-fo.png</texture>
+							<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
+						</control>
+						<control type="image">
+							<top>5</top>
+							<left>197</left>
+							<width>745</width>
+							<height>150</height>
+							<texture border="10">MatchCenter/dialog-bg-solid-white.png</texture>
+						</control>
+						<control type="image">
+							<left>200</left>
+							<top>10</top>
+							<width>140</width>
+							<height>140</height>
+							<texture>$INFO[ListItem.Property(home_team_logo)]</texture>
+						</control>
+						<control type="image">
+							<left>800</left>
+							<top>10</top>
+							<width>140</width>
+							<height>140</height>
+							<texture>$INFO[ListItem.Property(away_team_logo)]</texture>
+						</control>
+						<control type="label">
+							<description>Time progress</description>
+							<posx>10</posx>
+							<posy>50</posy>
+							<width>140</width>
+							<height>40</height>
+							<label>$INFO[ListItem.Property(minute)]</label>
+							<font>font24_title</font>
+							<align>center</align>
+							<scroll>true</scroll>
+							<textcolor>gold</textcolor>
+							<shadowcolor>AA000000</shadowcolor>
+						</control>
+						<control type="label">
+							<description>Start Time</description>
+							<posx>20</posx>
+							<posy>125</posy>
+							<width>160</width>
+							<height>40</height>
+							<label>$INFO[ListItem.Property(starttime)]</label>
+							<font>font13_title</font>
+							<align>center</align>
+							<textcolor>blue</textcolor>
+							<shadowcolor>AA000000</shadowcolor>
+						</control>
+						<control type="progress">
+							<description>Progressbar</description>
+							<left>20</left>
+							<top>100</top>
+							<width>150</width>
+							<height>16</height>
+							<info>ListItem.Property(matchpercent)</info>
+							<texturebg border="3">MatchCenter/texturebg_border_white.png</texturebg>
+							<midtexture colordiffuse="FF12B2E7" border="3">MatchCenter/texturebg_white.png</midtexture>
+							<lefttexture>-</lefttexture>
+							<righttexture>-</righttexture>
+							<overlaytexture>-</overlaytexture>
+						</control>
+						<control type="image">
+							<left>160</left>
+							<top>57</top>
+							<width>30</width>
+							<height>30</height>
+							<texture>$INFO[ListItem.Property(status)]</texture>
+						</control>
+						<control type="label">
+							<description>League</description>
+							<posx>350</posx>
+							<posy>10</posy>
+							<width>450</width>
+							<height>40</height>
+							<label>$INFO[ListItem.Property(league_and_round)]</label>
+							<font>font13_title</font>
+							<align>center</align>
+							<textcolor>selected</textcolor>
+							<shadowcolor>AA000000</shadowcolor>
+						</control>
+						<control type="label">
+							<description>Result</description>
+							<posx>490</posx>
+							<posy>50</posy>
+							<width>170</width>
+							<height>40</height>
+							<label>$INFO[ListItem.Property(result)]</label>
+							<font>font_MainMenu</font>
+							<align>center</align>
+							<textcolor>blue</textcolor>
+							<shadowcolor>AA000000</shadowcolor>
+						</control>
+						<control type="image">
+							<left>550</left>
+							<top>110</top>
+							<width>60</width>
+							<height>40</height>
+							<texture>$INFO[ListItem.Property(canal)]</texture>
+						</control>
+						<control type="textbox">
+							<description>Home Team</description>
+							<posx>350</posx>
+							<posy>47</posy>
+							<width>160</width>
+							<height>90</height>
+							<label>$INFO[ListItem.Property(hometeam_long)]</label>
+							<font>font24_title</font>
+							<align>center</align>
+							<textcolor>blue</textcolor>
+							<shadowcolor>AA000000</shadowcolor>
+							<autoscroll>true</autoscroll>
+						</control>
+						<control type="textbox">
+							<description>Home Team</description>
+							<posx>630</posx>
+							<posy>47</posy>
+							<width>160</width>
+							<height>90</height>
+							<label>$INFO[ListItem.Property(awayteam_long)]</label>
+							<font>font24_title</font>
+							<align>center</align>
+							<textcolor>blue</textcolor>
+							<shadowcolor>AA000000</shadowcolor>
+							<autoscroll>true</autoscroll>
+						</control>
+						<control type="image">
+							<description>Home Team goal</description>
+							<left>335</left>
+							<top>123</top>
+							<width>30</width>
+							<height>30</height>
+							<texture>$INFO[ListItem.Property(has_home_goals)]</texture>
+						</control>
+						<control type="label">
+							<description>Home Goal details</description>
+							<posx>370</posx>
+							<posy>125</posy>
+							<width>185</width>
+							<height>40</height>
+							<scroll>true</scroll>
+							<label>$INFO[ListItem.Property(home_goal_details)]</label>
+							<font>font12</font>
+							<align>left</align>
+							<textcolor>black</textcolor>
+							<shadowcolor>AA000000</shadowcolor>
+						</control>
+						<control type="image">
+							<description>Away Team goal</description>
+							<left>780</left>
+							<top>123</top>
+							<width>30</width>
+							<height>30</height>
+							<texture>$INFO[ListItem.Property(has_away_goals)]</texture>
+						</control>
+						<control type="label">
+							<description>Away Goal details</description>
+							<posx>590</posx>
+							<posy>125</posy>
+							<width>185</width>
+							<height>40</height>
+							<scroll>true</scroll>
+							<label>$INFO[ListItem.Property(away_goal_details)]</label>
+							<font>font12</font>
+							<align>right</align>
+							<textcolor>black</textcolor>
+							<shadowcolor>AA000000</shadowcolor>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="scrollbar" id="61">
+					<left>990</left>
+					<top>120</top>
+					<width>14</width>
+					<height>495</height>
+					<texturesliderbackground colordiffuse="29FFFFFF">MatchCenter/white.png</texturesliderbackground>
+					<texturesliderbar colordiffuse="AAFFFFFF">MatchCenter/white.png</texturesliderbar>
+					<texturesliderbarfocus colordiffuse="FF12B2E7">MatchCenter/white.png</texturesliderbarfocus>
+					<textureslidernib>-</textureslidernib>
+					<textureslidernibfocus>-</textureslidernibfocus>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+					<onleft>32500</onleft>
+					<onright>32500</onright>
+					<ondown>32500</ondown>
+					<onup>32500</onup>
+					<visible>IsEmpty(Window(home).Property(no-games))+IsEmpty(Window(home).Property(loading-script-matchcenter-livescores))</visible>
+					<animation effect="slide" end="120,0" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
+				</control>
+			</control>
+		</control>
+		<!--Busy control-->
+		<control type="image">
+			<left>680</left>
+			<top>550</top>
+			<width>550</width>
+			<height>150</height>
+			<visible>!IsEmpty(Window(home).Property(loading-script-matchcenter-livescores))</visible>
+			<texture border="2">MatchCenter/dialog-bg-solid.png</texture>
+		</control>
+		<control type="image" id="32540">
+			<description>Busy animation</description>
+			<posx>750</posx>
+			<posy>560</posy>
+			<width>120</width>
+			<height>120</height>
+			<texture></texture>
+			<aspectratio>keep</aspectratio>
+			<animation effect="rotate" start="0" end="360" center="810,620" time="1200" loop="true" condition="true">conditional</animation>
+			<visible>!IsEmpty(Window(home).Property(loading-script-matchcenter-livescores))</visible>
+		</control>
+		<control type="label">
+			<top>580</top>
+			<left>700</left>
+			<width>650</width>
+			<height>90</height>
+			<font>font35_title</font>
+			<textcolor>FFF0F0F0</textcolor>
+			<aligny>center</aligny>
+			<align>center</align>
+			<label>CARGANDO...</label>
+			<visible>!IsEmpty(Window(home).Property(loading-script-matchcenter-livescores))</visible>
+		</control>	
+		<!--No games-->
+		<control type="image" id="32541">
+			<description>Goal image</description>
+			<posx>580</posx>
+			<posy>250</posy>
+			<width>150</width>
+			<height>150</height>
+			<texture></texture>
+			<aspectratio>keep</aspectratio>
+			<visible>!IsEmpty(Window(home).Property(no-games))</visible>
+		</control>
+		<control type="label">
+			<top>350</top>
+			<left>330</left>
+			<width>650</width>
+			<height>90</height>
+			<font>font35_title</font>
+			<textcolor>FFF0F0F0</textcolor>
+			<aligny>center</aligny>
+			<align>center</align>
+			<label>No hay partidos en directo</label>
+			<visible>!IsEmpty(Window(home).Property(no-games))</visible>
+		</control>
+	</controls>
+</window>

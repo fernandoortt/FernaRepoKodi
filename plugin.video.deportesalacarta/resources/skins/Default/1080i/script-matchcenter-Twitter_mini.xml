@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window type="window">
+	<depth>0.52</depth>
+	<defaultcontrol always="true">32500</defaultcontrol>
+ 	<animation type="WindowOpen" reversible="false">
+		<effect type="zoom" start="80" end="100" center="960,540" delay="160" tween="back" time="240" />
+		<effect type="fade" delay="160" end="100" time="240" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="zoom" start="100" end="80" center="960,540" easing="in" tween="back" time="240" />
+		<effect type="fade" start="100" end="0" time="240" />
+	</animation>
+	<defaultcontrol always="true">32501</defaultcontrol>
+	<controls>
+		<control type="group">
+			<top>10</top>
+			<control type="image">
+				<left>0</left>
+				<top>800</top>
+				<width>1000</width>
+				<height>280</height>
+				<texture border="2">MatchCenter/dialog-bg-solid.png</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>800</top>
+				<width>1000</width>
+				<height>280</height>
+				<texture colordiffuse="FF12B2E7" border="2">MatchCenter/white70.png</texture>
+			</control>
+			<control type="label" id="32500">
+				<textoffsetx>70</textoffsetx>
+				<left>978</left>
+				<top>527</top>
+				<width>300</width>
+				<height>100</height>
+				<font>font20_title</font>
+				<label></label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<shadowcolor>black</shadowcolor>
+			</control>
+            <control type="image" id="32552">
+				<left>900</left>
+				<top>400</top>
+				<width>300</width>
+				<height>300</height>
+                <aspectratio>keep</aspectratio>
+				<texture>MatchCenter/cargandotweet.gif</texture>
+			</control>
+		</control>
+		<control type="group">
+			<visible>IsEmpty(Window(home).Property(loading-script-matchcenter-twitter))</visible>
+			<control type="list" id="32501">
+				<left>70</left>
+				<top>600</top>
+				<width>2000</width>
+				<height>200</height>
+				<onleft>32566</onleft>
+				<onright>32515</onright>
+				<onup>32566</onup>
+				<ondown>32515</ondown>
+				<itemlayout height="90" width="1137">
+					<control type="image">
+						<left>-25</left>
+						<top>-20</top>
+						<width>2030</width>
+						<height>128</height>
+						<texture border="40">MatchCenter/button-nofo.png</texture>
+					</control>
+					<control type="image">
+						<description>Profile pic</description>
+						<left>2</left>
+						<top>3</top>
+						<width>83</width>
+						<height>83</height>
+						<texture>$INFO[ListItem.Property(profilepic)]</texture>
+						<pulseonselect></pulseonselect>
+					</control>
+					<control type="textbox">
+						<description>Tweet author</description>
+						<posx>95</posx>
+						<posy>5</posy>
+						<width>1000</width>
+						<height>70</height>
+						<label>$INFO[ListItem.Property(author)]</label>
+						<font>font14</font>
+						<align>left</align>
+						<textcolor>cadetblue</textcolor>
+						<shadowcolor>AA000000</shadowcolor>
+					</control>
+					<control type="textbox">
+						<description>Tweet timedelta</description>
+						<posx>720</posx>
+						<posy>5</posy>
+						<width>400</width>
+						<height>70</height>
+						<label>$INFO[ListItem.Property(timedelta)]</label>
+						<font>font12</font>
+						<align>right</align>
+						<textcolor>cadetblue</textcolor>
+						<shadowcolor>AA000000</shadowcolor>
+					</control>
+					<control type="textbox">
+						<description>Tweet text</description>
+						<posx>95</posx>
+						<posy>30</posy>
+						<width>1000</width>
+						<height>70</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>font14</font>
+						<align>left</align>
+						<textcolor>grey</textcolor>
+						<shadowcolor>AA000000</shadowcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout height="90" width="1137">
+					<control type="image">
+						<left>-25</left>
+						<top>-20</top>
+						<width>1182</width>
+						<height>128</height>
+						<texture border="40">MatchCenter/button-nofo.png</texture>
+					</control>
+					<control type="image">
+						<left>-20</left>
+						<top>-20</top>
+						<width>1177</width>
+						<height>128</height>
+						<texture border="40" colordiffuse="FF12B2E7">MatchCenter/button-fo.png</texture>
+						<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
+					</control>
+					<control type="image">
+						<description>Profile Pic</description>
+						<left>2</left>
+						<top>3</top>
+						<width>83</width>
+						<height>83</height>
+						<texture>$INFO[ListItem.Property(profilepic)]</texture>
+					</control>
+					<control type="textbox">
+						<description>Tweet author</description>
+						<posx>95</posx>
+						<posy>5</posy>
+						<width>1000</width>
+						<height>70</height>
+						<label>$INFO[ListItem.Property(author)]</label>
+						<font>font14</font>
+						<align>left</align>
+						<textcolor>cadetblue</textcolor>
+						<shadowcolor>AA000000</shadowcolor>
+					</control>
+					<control type="textbox">
+						<description>Tweet timedelta</description>
+						<posx>720</posx>
+						<posy>5</posy>
+						<width>400</width>
+						<height>70</height>
+						<label>$INFO[ListItem.Property(timedelta)]</label>
+						<font>font12</font>
+						<align>right</align>
+						<textcolor>cadetblue</textcolor>
+						<shadowcolor>AA000000</shadowcolor>
+					</control>
+					<control type="textbox">
+						<description>Tweet Text</description>
+						<posx>95</posx>
+						<posy>30</posy>
+						<width>1000</width>
+						<height>70</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>font14</font>
+						<align>left</align>
+						<textcolor>white</textcolor>
+						<shadowcolor>AA000000</shadowcolor>
+						<pulseonselect></pulseonselect>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+ 		<control type="button" id="32514">
+			<description>Reset</description>
+			<left>-30</left>
+			<top>585</top>
+			<width>120</width>
+			<height>120</height>
+			<label></label>
+			<texturefocus border="30" colordiffuse="FF12B2E7">MatchCenter/reset.png</texturefocus>
+			<texturenofocus border="30">MatchCenter/reset.png</texturenofocus>
+			<pulseonselect>no</pulseonselect>
+			<onleft>32501</onleft>
+			<onright>32566</onright>
+			<onup>32501</onup>
+			<ondown>32566</ondown>
+		</control>
+ 		<control type="button" id="32515">
+			<description>Next</description>
+			<left>1175</left>
+			<top>585</top>
+			<width>120</width>
+			<height>120</height>
+			<label></label>
+			<texturefocus border="30" colordiffuse="FF12B2E7">MatchCenter/left-arrow.png</texturefocus>
+			<texturenofocus border="30">MatchCenter/left-arrow.png</texturenofocus>
+			<pulseonselect>no</pulseonselect>
+			<onleft>32501</onleft>
+			<onright>32501</onright>
+			<onup>32501</onup>
+			<ondown>32501</ondown>
+		</control>
+ 		<control type="button" id="32566">
+			<description>Marcadores</description>
+			<left>45</left>
+			<top>664</top>
+			<width>24</width>
+			<height>24</height>
+			<label></label>
+			<texturefocus colordiffuse="red">MatchCenter/marcadores.gif</texturefocus>
+			<texturenofocus>MatchCenter/marcadores.gif</texturenofocus>
+			<pulseonselect>no</pulseonselect>
+			<onleft>32514</onleft>
+			<onright>32501</onright>
+			<onup>32514</onup>
+			<ondown>32501</ondown>
+		</control>
+		<control type="image" id="32540">
+			<description>Busy animation</description>
+			<posx>110</posx>
+			<posy>50</posy>
+			<width>50</width>
+			<height>50</height>
+			<texture></texture>
+			<aspectratio>keep</aspectratio>
+			<animation effect="rotate" start="0" end="360" center="auto" time="380" loop="true" condition="true">conditional</animation>
+			<visible>!IsEmpty(Window(home).Property(loading-script-matchcenter-twitter))</visible>
+		</control>
+        <control type="image" id="32541">
+			<description>Busy animation</description>
+			<posx>50</posx>
+			<posy>30</posy>
+			<width>80</width>
+			<height>80</height>
+			<texture></texture>
+			<aspectratio>keep</aspectratio>
+			<visible>!IsEmpty(Window(home).Property(loading-script-matchcenter-twitter))</visible>
+		</control>
+        <control type="image" id="32542">
+            <description>Not user found</description>
+            <posx>250</posx>
+            <posy>550</posy>
+            <width>140</width>
+            <height>140</height>
+            <texture></texture>
+            <aspectratio>keep</aspectratio>
+            <animation effect="slide" start="-600" end="100" time="1700"  condition="true">WindowOpen</animation>
+            <animation effect="slide" start="100" end="1500" time="800"  condition="true">WindowClose</animation>
+        </control>
+        <control type="image" id="32543">
+            <description>Not user found Text</description>
+            <posx>350</posx>
+            <posy>500</posy>
+            <width>220</width>
+            <height>120</height>
+            <texture></texture>
+            <aspectratio>keep</aspectratio>
+            <animation effect="slide" start="1000" end="100" center="auto" time="380" delay=1800 tween="bounce"  condition="true">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="800"  condition="true">WindowClose</animation>
+        </control>
+        <control type="image" id="32553">
+            <description>Twitter replied gif</description>
+            <left>100</left>
+            <top>500</top>
+            <width>110</width>
+            <height>110</height>
+            <texture></texture>
+        </control>
+        <control type="fadelabel" id="32544">
+            <description>Not user found Message</description>
+            <left>480</left>
+            <top>600</top>
+            <width>500</width>
+            <height>57</height>
+            <font>font13_title</font>
+            <label></label>
+            <align>left</align>
+            <aligny>center</aligny>
+            <scroll>true</scroll>
+            <scrollspeed>70</scrollspeed>
+            <scrollout>true</scrollout>
+            <shadowcolor>black</shadowcolor>
+            <animation effect="zoom" start="0" end="100" center="auto" time="1380" delay=2000   condition="true">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="800"  condition="true">WindowClose</animation>
+        </control>
+		<control type="label">
+			<top>65</top>
+			<left>-220</left>
+			<width>650</width>
+			<height>90</height>
+			<font>font12_title</font>
+			<textcolor>orange</textcolor>
+			<aligny>center</aligny>
+			<align>center</align>
+			<label>CARGANDO...</label>
+			<animation effect="fade" start="0" end="100" center="auto" time="380" loop="true" condition="true">conditional</animation>
+			<visible>!IsEmpty(Window(home).Property(loading-script-matchcenter-twitter))</visible>
+		</control>
+		<!-- Controles marcadores		 -->
+		<control type="button" id="33501">
+			<left>40</left>
+			<top>685</top>
+			<width>1200</width>
+			<height>35</height>
+			<texturenofocus colordiffuse="gold" border="5">Controls/MenuItemFO.png</texturenofocus>
+			<texturefocus colordiffuse="white" border="5">Controls/MenuItemFO.png</texturefocus>
+		</control>
+		<control type="label" id="33500">
+			<description>Texto</description>
+			<posx>50</posx>
+			<posy>690</posy>
+			<width>1140</width>
+			<height>30</height>
+			<label></label>
+			<font>font13</font>
+			<align>left</align>
+			<textcolor>steelblue</textcolor>
+			<shadowcolor>AA000000</shadowcolor>
+			<scroll>true</scroll>
+		</control>
+		<control type="label" id="33502">
+			<description>Texto</description>
+			<posx>995</posx>
+			<posy>560</posy>
+			<width>500</width>
+			<height>40</height>
+			<label></label>
+			<font>font13_title</font>
+			<align>left</align>
+			<shadowcolor>AA000000</shadowcolor>
+			<scroll>true</scroll>
+		</control>
+		<control type="image" id="33503">
+			<left>930</left>
+			<top>550</top>
+			<width>60</width>
+			<height>50</height>
+			<texture></texture>
+		</control>
+	</controls>
+</window>

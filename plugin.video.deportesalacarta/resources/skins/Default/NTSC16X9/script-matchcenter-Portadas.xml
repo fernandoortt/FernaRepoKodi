@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window type="window">
+	<depth>0.52</depth>
+	<animation type="WindowOpen" reversible="false">
+		<effect type="zoom" start="80" end="100" center="960,540" delay="160" tween="back" time="240" />
+		<effect type="fade" delay="160" end="100" time="240" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="zoom" start="100" end="80" center="960,540" easing="in" tween="back" time="240" />
+		<effect type="fade" start="100" end="0" time="240" />
+	</animation>
+	<defaultcontrol always="true">32502</defaultcontrol>
+	<controls>
+		<control type="group">
+			<control type="group">
+				<left>260</left>
+				<top>10</top>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>569</width>
+					<height>707</height>
+					<texture border="2" colordiffuse="F2FE9A2E">MatchCenter/dialog-bg-solid.png</texture>
+				</control>
+				<control type="image" id="32501">
+					<left>5</left>
+					<top>5</top>
+					<width>559</width>
+					<height>697</height>
+				</control>
+				<control type="button" id="32502">
+					<left>5</left>
+					<top>5</top>
+					<width>559</width>
+					<height>697</height>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="button" id="32503">
+					<left>400</left>
+					<top>670</top>
+					<width>100</width>
+					<height>40</height>
+					<texturefocus>http://i.imgur.com/ruw8GDU.png</texturefocus>
+					<texturenofocus>http://i.imgur.com/ruw8GDU.png</texturenofocus>
+					<animation effect="slide" end="100,0" tween="bounce" delay="2000" time="2000" condition="Control.HasFocus(32502)" reversible="true">Conditional</animation>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

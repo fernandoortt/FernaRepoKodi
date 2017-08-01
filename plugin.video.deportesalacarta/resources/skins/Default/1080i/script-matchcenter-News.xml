@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window type="window">
+	<depth>0.52</depth>
+	<animation type="WindowOpen" reversible="false">
+		<effect type="zoom" start="80" end="100" center="750,630" delay="160" tween="back" time="240" />
+		<effect type="fade" delay="160" end="100" time="240" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="zoom" start="100" end="80" center="750,630" easing="in" tween="back" time="240" />
+		<effect type="fade" start="100" end="0" time="240" />
+	</animation>
+	<defaultcontrol always="true">61</defaultcontrol>
+	<controls>
+		<control type="group">
+			<control type="image">
+				<description>background image</description>
+				<left>350</left>
+				<top>70</top>
+				<width>750</width>
+				<height>630</height>
+				<texture border="2">MatchCenter/tablet.png</texture>
+			</control>
+			<control type="group">
+				<control type="radiobutton" id="32529">
+					<left>510</left>
+					<top>130</top>
+					<width>30</width>
+					<height>30</height>
+					<radiowidth>30</radiowidth>
+					<radioheight>30</radioheight>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<label></label>
+					<animation effect="slide" end="-70,0" time="0" condition="true">Conditional</animation>
+					<textureradioofffocus colordiffuse="EEFFFFFF">MatchCenter/close.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="EEFFFFFF">MatchCenter/logo.png</textureradiooffnofocus>
+					<textureradioonfocus colordiffuse="EEFFFFFF">MatchCenter/close.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="EEFFFFFF">MatchCenter/logo.png</textureradioonnofocus>
+					<onclick>Action(close)</onclick>
+					<ondown>61</ondown>
+					<onleft>61</onleft>
+				</control>
+				<control type="image" id="32500">
+					<top>140</top>
+					<left>520</left>
+					<width>400</width>
+					<height>200</height>
+				</control>
+				<control type="textbox" id="32501">
+					<description>Text</description>
+					<left>440</left>
+					<top>360</top>
+					<width>550</width>
+					<height>240</height>
+					<label></label>
+					<font>font10</font>
+					<align>left</align>
+					<textcolor>white</textcolor>
+					<pagecontrol>61</pagecontrol>
+				</control>
+				<control type="textbox" id="32502">
+					<description>Text</description>
+					<left>460</left>
+					<top>340</top>
+					<width>530</width>
+					<height>auto</height>
+					<align>center</align>
+					<font>font13</font>
+					<align>left</align>
+					<textcolor>gold</textcolor>
+				</control>
+				<control type="scrollbar" id="61">
+					<left>885</left>
+					<top>390</top>
+					<width>15</width>
+					<height>213</height>
+					<texturesliderbackground colordiffuse="29FFFFFF">MatchCenter/white.png</texturesliderbackground>
+					<texturesliderbar colordiffuse="AAFFFFFF">MatchCenter/white.png</texturesliderbar>
+					<texturesliderbarfocus colordiffuse="FF12B2E7">MatchCenter/white.png</texturesliderbarfocus>
+					<textureslidernib>-</textureslidernib>
+					<textureslidernibfocus>-</textureslidernibfocus>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+					<visible>IsEmpty(Window(home).Property(no-text))</visible>
+					<animation effect="slide" end="120,0" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
+					<onup>32529</onup>
+					<ondown>32529</ondown>
+					<onright>32529</onright>
+					<onleft>32529</onleft>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

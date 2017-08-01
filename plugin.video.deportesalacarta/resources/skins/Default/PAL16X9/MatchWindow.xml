@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+    <allowoverlays>false</allowoverlays>
+    <controls>
+      <control type="group" id="10001">
+        <left>120</left>
+        <top>60</top>
+        <width>1340</width>
+        <height>970</height>
+        <control type="image">
+          <texture>Windows/DialogBack.png</texture>
+        </control>
+        <control type="image">
+          <height>4%</height>
+          <texture>Windows/dialogheader.png</texture>
+        </control>
+        <control type="button" id="10003">
+          <left>88%</left>
+          <top>3%</top>
+          <width>10%</width>
+          <height>7%</height>
+          <texturefocus>Controls/DialogCloseButton-focus.png</texturefocus>
+          <texturenofocus>Controls/DialogCloseButton.png</texturenofocus>    
+        </control>
+      </control>
+    </controls>
+</window>

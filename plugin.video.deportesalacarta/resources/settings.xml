@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="General">
+        <setting id="player_type" type="enum" values="Auto|MPlayer|DVDPlayer" label="30000" default="2"/>
+        <setting id="player_mode" type="enum" values="Direct|SetResolvedUrl|Built-In|Download and Play" label="30044" default="0"/>
+        <setting id="default_action" type="enum" lvalues="30006|30007|30008|30009" label="30005" default="0"/>
+        <setting id="thumbnail_type" type="enum" lvalues="30011|30012|30200" label="30010" default="2"/>
+        <setting id="forceview" type="bool" label="30043" default="false"/>
+        <setting id="debug" type="bool" label="30003" default="true"/>
+        <setting type="sep"/>
+        <setting label="Actualizaciones" type="lsep"/>
+        <setting id="updatecheck" type="bool" label="30001" default="true"/>
+		<setting id="updateauto" type="bool" label="Actualizar automáticamente" default="false" enable="eq(-1,true)"/>
+    </category>
+
+    <!-- Login -->
+    <category label="30500">
+
+        <setting type="sep"/>
+        <setting id="hidepremium" type="bool" label="Ocultar servidores de pago sin cuenta" default="false"/>
+
+        <setting type="sep"/>
+        <setting id="realdebridpremium" type="bool" label="Real-Debrid" default="false"/>
+
+        <setting type="sep"/>
+        <setting id="alldebridpremium" type="bool" label="Alldebrid" default="false"/>
+        <setting id="alldebriduser" type="text" label="30014" enable="eq(-1,true)" default=""/>
+        <setting id="alldebridpassword" type="text" option="hidden" label="30015" enable="!eq(-1,)+eq(-2,true)" default=""/>
+
+        <setting type="sep"/>
+        <setting id="uploadedtopremium" type="bool" label="Uploaded.to" default="false"/>
+        <setting id="uploadedtouser" type="text" label="30014" enable="eq(-1,true)" default=""/>
+        <setting id="uploadedtopassword" type="text" option="hidden" label="30015" enable="!eq(-1,)+eq(-2,true)" default=""/>
+
+        <setting type="sep"/>
+        <setting id="nowvideopremium" type="bool" label="Nowvideo" default="false"/>
+        <setting id="nowvideouser" type="text" label="30014" enable="eq(-1,true)" default=""/>
+        <setting id="nowvideopassword" type="text" option="hidden" label="30015" enable="!eq(-1,)+eq(-2,true)" default=""/>
+
+        <setting type="sep"/>
+        <setting id="onefichierpremium" type="bool" label="onefichier" default="false"/>
+        <setting id="onefichieruser" type="text" label="30014" enable="eq(-1,true)" default=""/>
+        <setting id="onefichierpassword" type="text" option="hidden" label="30015" enable="!eq(-1,)+eq(-2,true)" default=""/>
+
+        <setting type="sep"/>
+        <setting id="pcloud" type="bool" label="Cuenta free o premium en pCloud" default="false"/>
+        <setting id="pclouduser" type="text" label="30014" enable="eq(-1,true)" default=""/>
+        <setting id="pcloudpassword" type="text" option="hidden" label="30015" enable="!eq(-1,)+eq(-2,true)" default=""/>
+
+        <setting type="sep"/>
+        <setting id="jdownloader_enabled" type="bool" label="JDownloader" default="false"/>
+        <setting id="jdownloader" type="text" label="30022" enable="eq(-1,true)" default="http://127.0.0.1:10025"/>
+    </category>
+
+    <!-- Path downloads and subtitles -->
+    <category label="30501">
+        <!--setting id="subtitulo" type="bool" label="30021" default="false"/>
+        <setting id="subtitle_type" type="enum" lvalues="30432|30434|30433" label ="30431" enable ="eq(-1,true)" default="0"/>
+        <setting id="subtitlepath_folder" type="folder" source="" enable = "eq(-1,0)+eq(-2,true)" label="30435" default=""/>
+        <setting id="subtitlepath_file" type="file" source="" enable = "eq(-2,2)+eq(-3,true)" label="30436" default=""/>
+        <setting id="subtitlepath_keyboard" type="text" enable ="eq(-3,1)+eq(-4,true)" label="30437" default=""/-->
+
+        <setting type="sep"/>
+        <setting id="downloadpath" type="text" label="30017" default=""/>
+        <setting id="downloadlistpath" type="text" label="30018" default=""/>
+        <setting id="bookmarkpath" type="text" source="video" option="writeable" label="30030" default=""/>
+    </category>
+
+    <category label="MatchCenter">
+		<setting id="matchcenter_enabled" type="bool" label="Activar MatchCenter" default="true"/>
+		<setting label="Botones/Teclas de acceso (Cambios requieren reiniciar Kodi)" type="lsep"/>
+		<setting id="button_keymap" type="action" label="31100" action="RunPlugin(plugin://plugin.video.deportesalacarta/?ewogICAgImFjdGlvbiI6ICJlZGl0b3Jfa2V5bWFwIiwgCiAgICAiaW5mb0xhYmVscyI6IHt9Cn0%3D)" enable="eq(-2,true)"/>
+		<setting label="Configuración Twitter" type="lsep"/>
+		<setting id="lang_tweets" type="enum" values="No Filtrar|Español" label="Filtrar tweets por idioma" default="0" enable="eq(-4,true)"/>
+		<setting id="type_tweets" type="enum" values="Mixto (Populares y recientes)|Recientes|Populares" label="Tipo de resultados para las búsquedas" default="0" enable="eq(-5,true)"/>
+		<setting id="update_tweets" type="enum" values="No actualizar|20 segundos|40 segundos|minuto|2 minutos" label="Actualizar tweets mientras se reproduce cada..." default="2" enable="eq(-6,true)"/>
+		<setting id="team_tweet" type="enum" values="Ninguno|Alavés|Athletic|Atlético|Barcelona|Betis|Celta|Deportivo|Eibar|Espanyol|Granada|Las Palmas|Leganés|Málaga|Osasuna|Real Madrid|Real Sociedad|Sevilla|Sporting|Valencia|Villarreal" label="Equipo al que sigues (Aparecerá en el menú de twitter)" default="0" enable="eq(-7,true)"/>
+        <setting label="Configuración Marcadores y Noticias" type="lsep"/>
+		<setting id="update_scores" type="enum" values="No actualizar|Minuto|2 minutos|5 minutos|10 minutos" label="Actualizar marcadores cada..." default="1" enable="eq(-9,true)"/>
+		<setting id="matchcenter_news" type="enum" values="Español|Inglés|Francés|Portugués" label="Idioma de la sección Noticias" default="0" enable="eq(-10,true)"/>
+    </category>
+
+</settings>

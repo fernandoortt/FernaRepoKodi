@@ -1,0 +1,19 @@
+[B]1.23[/B] - 09/04/17
+[COLOR yellow]Reparado:[/COLOR] Arenavision
+[COLOR blue]Uso de cuenta pCloud free o premium:[/COLOR] En especial para el canal F1FullRaces
+
+[B]1.19[/B] - 03/04/17
+[COLOR yellow]Reparado:[/COLOR] Sport7
+[COLOR blue]Nueva funcionalidad en MatchCenter:[/COLOR] Posibilidad de ver tweets y marcadores al mismo tiempo mientras se reproduce.
+
+[B]1.18[/B] - 01/04/17
+[COLOR yellow]Reparados:[/COLOR] Arenavision, lfootballws, livesportws y footballstreaming
+
+[B]1.17[/B] - 01/04/17
+[COLOR blue]Nueva funcionalidad:[/COLOR] MatchCenter, accesible desde cualquier lugar de Kodi a través de atajos de teclado configurables (por defecto tecla 'U'), o a través del menú principal. Incluye herramientas para consultar tanto si hay algo en reproducción como si no, estructuradas en 6 bloques: Marcadores, Twitter, Clasificaciones de fútbol, Noticias, Portadas y Agenda Televisiva.
+[COLOR green]Nuevos canales:[/COLOR] Sport365 y M+ A la Carta (en el canal Grabaciones Deportivas).
+[COLOR yellow]Reparados:[/COLOR] Motogpennegro, FullMatches, Livefootballol y apartado UFC en BoxingClub.
+[COLOR red]Desactivado:[/COLOR] Tugoleada
+
+[B]1.01[/B]
+Primera versión

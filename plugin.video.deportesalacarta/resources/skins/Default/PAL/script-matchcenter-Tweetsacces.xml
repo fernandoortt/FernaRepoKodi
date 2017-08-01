@@ -1,0 +1,1450 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window type="window">
+	<depth>0.52</depth>
+	<defaultcontrol always="true">32500</defaultcontrol>
+	<animation type="WindowOpen" reversible="false">
+		<effect type="zoom" start="80" end="100" center="960,540" delay="160" tween="back" time="240" />
+		<effect type="fade" delay="160" end="100" time="240" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="zoom" start="100" end="80" center="960,540" easing="in" tween="back" time="240" />
+		<effect type="fade" start="100" end="0" time="240" />
+	</animation>
+	<controls>
+		<control type="group">
+			<top>10</top>
+			<control type="image" id="32502">
+				<left>60</left>
+				<top>0</top>
+				<width>1158</width>
+				<height>700</height>
+				<texture colordiffuse="FF1FFFFFF" border="2"></texture>
+			</control>
+            <control type="image">
+				<left>60</left>
+				<top>0</top>
+				<width>1158</width>
+				<height>700</height>
+				<texture colordiffuse="FF12B2E7" border="2">MatchCenter/marconofanb.png</texture>
+			</control>
+            <control type="image" id="32520">
+                <left>190</left>
+                <top>255</top>
+                <width>900</width>
+                <height>370</height>
+				<texture border="2"></texture>
+			</control>
+            <control type="image">
+				<left>190</left>
+                <top>255</top>
+                <width>900</width>
+                <height>370</height>
+                <visible>!StringCompare(Control.GetLabel(32519),"")</visible>
+				<texture colordiffuse="FF12B2E7" border="2">MatchCenter/marconofanb.png</texture>
+			</control>
+            <control type="image">
+				<left>146</left>
+                <top>230</top>
+                <width>992</width>
+                <height>450</height>
+                <visible>!StringCompare(Control.GetLabel(32519),"")</visible>
+				<texture>MatchCenter/marcobanner.png</texture>
+			</control>
+            <control type="image" id="32519">
+				<left>220</left>
+				<top>290</top>
+				<width>100</width>
+				<height>100</height>
+				<texture border="2"></texture>
+			</control>
+            <control type="textbox" id="32521">
+				<left>350</left>
+				<top>340</top>
+				<width>730</width>
+				<height>57</height>
+				<font>font20_title</font>
+				<label></label>
+				<align>left</align>
+                <textcolor>tomato</textcolor>
+				<aligny>center</aligny>
+				<shadowcolor>black</shadowcolor>
+			</control>
+            <!--Seguir / Seguidores -->
+            <control type="image" id="32592">
+                <description>Siguiendo</description>
+                <left>350</left>
+                <top>120</top>
+                <width>100</width>
+                <height>100</height>
+                <texture></texture>
+                <aspectratio>keep</aspectratio>
+                <animation type="WindowOpen">
+                 <effect type="slide" start="-900" end="8"  time="1000" delay="400"/>
+                 <effect type="slide" start="0,-33"end="0" center="auto" time="600" delay="1500" tween="bounce"/>
+                </animation>
+                <animation effect="fade" start="0" end="0" >WindowClose</animation>
+            </control>
+            <control type="image" id="32593">
+                <description> Seguidores png</description>
+                <left>520</left>
+                <top>120</top>
+                <width>100</width>
+                <height>100</height>
+                <texture></texture>
+                <aspectratio>keep</aspectratio>
+                <animation type="WindowOpen">
+                 <effect type="slide" start="-900" end="8"  time="1000" delay="400"/>
+                 <effect type="slide" start="0,-33"end="0" center="auto" time="600" delay="1400" tween="bounce"/>
+                </animation>
+                <animation effect="fade" start="0" end="0" >WindowClose</animation>
+            </control>
+            <control type="image" id="32591">
+                <description>Animacion Seguir\Siguiendo</description>
+                <left>80</left>
+                <top>-100</top>
+                <width>500</width>
+                <height>500</height>
+                <texture></texture>
+                <aspectratio>keep</aspectratio>
+                <animation effect="slide" start="-900" end="1240"  time="1900" delay="400" >WindowOpen</animation>
+                <animation effect="fade" start="0" end="0" >WindowClose</animation>
+            </control>
+            <control type="label" id="32594">
+                <description>Nº seguidores</description>
+                <posx>630</posx>
+                <posy>435</posy>
+                <top>135</top>
+                <width>100</width>
+                <height>70</height>
+                <font>font20_title</font>
+                <label></label>
+                <aligny>center</aligny>
+                <textcolor>fuchsia</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <animation effect="slide" start="0,-100" end="0" center="auto" time="800" delay="2050" tween="elastic">WindowOpen</animation>
+            </control>
+            <control type="label" id="32595">
+                <description>Nº siguiendo</description>
+                <posx>460</posx>
+                <posy>435</posy>
+                <top>135</top>
+                <width>100</width>
+                <height>70</height>
+                <font>font20_title</font>
+                <label></label>
+                <aligny>center</aligny>
+                <textcolor>chocolate</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <animation effect="slide" start="0,-100" end="-0" center="auto" time="800" delay="2200" tween="elastic">WindowOpen</animation>
+            </control>
+            <!--Mention in mention-->
+            <control type="image">
+                <left>205</left>
+                <top>440</top>
+                <width>870</width>
+                <height>150</height>
+                <visible>!StringCompare(Control.GetLabel(32584),"")</visible>
+                <texture colordiffuse="99EAEAEA">MatchCenter/marco_minm.png</texture>
+            </control>
+            <control type="image" id="32584">
+                <left>270</left>
+                <top>470</top>
+                <width>70</width>
+                <height>70</height>
+                <texture></texture>
+            </control>
+            <control type="image">
+                <left>265</left>
+                <top>465</top>
+                <width>80</width>
+                <height>80</height>
+                <visible>!StringCompare(Control.GetLabel(32584),"")</visible>
+                <texture colordiffuse="FF333333">MatchCenter/marco_profile.png</texture>
+            </control>
+            <control type="textbox" id="32585">
+				<left>350</left>
+				<top>493</top>
+				<width>710</width>
+				<height>57</height>
+				<font>font13_title</font>
+				<label></label>
+				<align>left</align>
+                <textcolor>purple</textcolor>
+				<aligny>center</aligny>
+				<shadowcolor>gray</shadowcolor>
+			</control>
+            <control type="textbox" id="32586">
+				<left>350</left>
+				<top>455</top>
+				<width>730</width>
+				<height>57</height>
+				<font>font13_title</font>
+				<label></label>
+				<align>left</align>
+                <textcolor>lightseagreen</textcolor>
+				<aligny>center</aligny>
+				<shadowcolor>black</shadowcolor>
+			</control>
+            <!--Mention in reply-->
+            <control type="image" id="32561">
+                <left>190</left>
+                <top>245</top>
+                <width>900</width>
+                <height>370</height>
+				<texture border="2"></texture>
+			</control>
+            <control type="image">
+				<left>190</left>
+                <top>245</top>
+                <width>900</width>
+                <height>370</height>
+                <visible>!StringCompare(Control.GetLabel(32562),"")</visible>
+				<texture colordiffuse="FF12B2E7" border="2">MatchCenter/marconofanb.png</texture>
+			</control>
+            <control type="image">
+				<left>146</left>
+                <top>230</top>
+                <width>992</width>
+                <height>450</height>
+                <visible>!StringCompare(Control.GetLabel(32562),"")</visible>
+				<texture>MatchCenter/marcobanner.png</texture>
+			</control>
+            <control type="image" id="32562">
+				<left>220</left>
+				<top>300</top>
+				<width>100</width>
+				<height>100</height>
+				<texture border="2"></texture>
+			</control>
+            <control type="textbox" id="32563">
+				<left>350</left>
+				<top>350</top>
+				<width>730</width>
+				<height>57</height>
+				<font>font20_title</font>
+				<label></label>
+				<align>left</align>
+                <textcolor>tomato</textcolor>
+				<aligny>center</aligny>
+				<shadowcolor>black</shadowcolor>
+			</control>
+            <control type="textbox" id="32539">
+				<left>330</left>
+				<top>285</top>
+				<width>730</width>
+				<height>57</height>
+				<font>font13_title</font>
+				<label></label>
+				<align>left</align>
+                <textcolor>lightseagreen</textcolor>
+				<aligny>center</aligny>
+				<shadowcolor>black</shadowcolor>
+			</control>
+            <control type="fadelabel" id="32525">
+				<left>210</left>
+				<top>185</top>
+				<width>730</width>
+				<height>57</height>
+				<font>font20_title</font>
+				<label></label>
+				<align>left</align>
+                <textcolor>sandybrown</textcolor>
+                <scrollspeed>60</scrollspeed>
+                <scroll>true</scroll>
+				<aligny>center</aligny>
+				<shadowcolor>black</shadowcolor>
+			</control>
+            <control type="fadelabel" id="32560">
+				<left>120</left>
+				<top>190</top>
+				<width>1000</width>
+				<height>57</height>
+				<font>font20_title</font>
+				<label></label>
+				<align>left</align>
+                <textcolor>sandybrown</textcolor>
+                <scroll>true</scroll>
+				<aligny>center</aligny>
+				<shadowcolor>black</shadowcolor>
+			</control>
+            <control type="image">
+                <left>215</left>
+                <top>295</top>
+                <width>110</width>
+                <height>110</height>
+                <visible>!StringCompare(Control.GetLabel(32562),"")</visible>
+				<texture>MatchCenter/marco_profile.png</texture>
+			</control>
+            <control type="textbox" id="32564">
+                <left>350</left>
+                <top>300</top>
+                <width>700</width>
+                <height>57</height>
+                <font>font13_title</font>
+                <label></label>
+                <align>left</align>
+                <textcolor>lightseagreen</textcolor>
+                <aligny>center</aligny>
+                <shadowcolor>black</shadowcolor>
+            </control>
+            <control type="fadelabel" id="32546">
+                <left>180</left>
+                <top>150</top>
+                <width>700</width>
+                <height>57</height>
+                <font>font20_title</font>
+                <label></label>
+                <align>left</align>
+                <textcolor>yellow</textcolor>
+                <aligny>center</aligny>
+                <scrollspeed>60</scrollspeed>
+                <scroll>true</scroll>
+                <shadowcolor>black</shadowcolor>
+            </control>
+            <control type="image">
+                <left>215</left>
+                <top>285</top>
+                <width>110</width>
+                <height>110</height>
+                <visible>!StringCompare(Control.GetLabel(32519),"")</visible>
+				<texture>MatchCenter/marco_profile.png</texture>
+			</control>
+            <control type="image" id="32522">
+				<left>240</left>
+                <aligny>center</aligny>
+				<top>430</top>
+				<width>300</width>
+				<height>160</height>
+                <aspectratio>keep</aspectratio>
+				<texture></texture>
+			</control>
+            <control type="image" id="32544">
+                <left>530</left>
+                <aligny>center</aligny>
+                <top>398</top>
+                <width>215</width>
+                <height>215</height>
+                <aspectratio>keep</aspectratio>
+                <texture></texture>
+            </control>
+            <control type="image" id="32524">
+				<left>415</left>
+				<top>220</top>
+				<width>400</width>
+				<height>400</height>
+                <aspectratio>keep</aspectratio>
+				<texture border="2"></texture>
+			</control>
+            <control type="textbox" id="32523">
+				<left>560</left>
+				<top>450</top>
+				<width>500</width>
+				<height>135</height>
+				<font>font20_title</font>
+				<label></label>
+				<align>left</align>
+                <textcolor>floralwhite</textcolor>
+                <scrolltime>200</scrolltime>
+                <autoscroll delay="4000" time="5000" repeat="10000"></autoscroll>
+				<shadowcolor>black</shadowcolor>
+			</control>
+            <control type="image" id="32504">
+				<left>90</left>
+				<top>90</top>
+				<width>100</width>
+				<height>100</height>
+				<texture border="2"></texture>
+			</control>
+            <control type="image">
+				<left>84</left>
+				<top>84</top>
+				<width>111</width>
+				<height>111</height>
+                <visible>!StringCompare(Control.GetLabel(32504),"")</visible>
+				<texture>MatchCenter/marco_profile.png</texture>
+            </control>    
+            <control type="image" id="32545">
+				<left>90</left>
+				<top>90</top>
+				<width>70</width>
+				<height>70</height>
+				<texture border="2"></texture>
+			</control>
+            <control type="image">
+				<left>88</left>
+				<top>87</top>
+				<width>75</width>
+				<height>75</height>
+                <visible>!StringCompare(Control.GetLabel(32545),"")</visible>
+				<texture>MatchCenter/marco_profile.png</texture>    
+			</control>
+            <control type="image" id="32505">
+				<left>380</left>
+                <aligny>center</aligny>
+				<top>260</top>
+				<width>500</width>
+				<height>360</height>
+                <aspectratio>keep</aspectratio>
+				<texture></texture>
+			</control>
+            <!--images en tweet directo-->
+            <control type="image" id="32510">
+				<left>380</left>
+                <aligny>center</aligny>
+				<top>250</top>
+				<width>250</width>
+				<height>180</height>
+                <aspectratio>keep</aspectratio>
+				<texture></texture>
+			</control>
+            <control type="image" id="32511">
+				<left>380</left>
+				<top>435</top>
+				<width>250</width>
+				<height>180</height>
+                <aspectratio>keep</aspectratio>
+				<texture></texture>
+			</control>
+            <control type="image" id="32512">
+				<left>635</left>
+                <aligny>center</aligny>
+				<top>250</top>
+				<width>250</width>
+				<height>180</height>
+                <aspectratio>keep</aspectratio>
+				<texture></texture>
+			</control>
+            <control type="image" id="32513">
+				<left>635</left>
+                <aligny>center</aligny>
+				<top>434</top>
+				<width>250</width>
+				<height>180</height>
+                <aspectratio>keep</aspectratio>
+				<texture></texture>
+			</control>
+            <control type="image" id="32514">
+				<left>250</left>
+				<top>260</top>
+				<width>350</width>
+				<height>350</height>
+                <aspectratio>keep</aspectratio>
+				<texture></texture>
+			</control>
+            <control type="image" id="32515">
+                <left>660</left>
+                <top>260</top>
+                <width>350</width>
+                <height>350</height>
+                <aspectratio>keep</aspectratio>
+                <texture></texture>
+			</control>
+            <control type="image" id="32599">
+				<left>150</left>
+				<top>260</top>
+				<width>300</width>
+				<height>300</height>
+                <aspectratio>keep</aspectratio>
+				<texture></texture>
+			</control>
+            <control type="image" id="32600">
+                <left>490</left>
+                <top>260</top>
+                <width>300</width>
+                <height>300</height>
+                <aspectratio>keep</aspectratio>
+                <texture></texture>
+			</control>
+            <control type="image" id="32516">
+                <left>830</left>
+                <aligny>center</aligny>
+                <top>260</top>
+                <width>300</width>
+                <height>300</height>
+                <aspectratio>keep</aspectratio>
+                <texture></texture>
+			</control>
+            <!--images en tweet con mencion-->
+            <control type="image" id="32550">
+				<left>220</left>
+                <aligny>center</aligny>
+				<top>400</top>
+				<width>200</width>
+				<height>200</height>
+                <aspectratio>keep</aspectratio>
+				<texture></texture>
+			</control>
+            <control type="image" id="32551">
+				<left>430</left>
+				<top>400</top>
+				<width>200</width>
+				<height>200</height>
+                <aspectratio>keep</aspectratio>
+				<texture></texture>
+			</control>
+            <control type="image" id="32552">
+				<left>650</left>
+                <aligny>center</aligny>
+				<top>400</top>
+				<width>200</width>
+				<height>200</height>
+                <aspectratio>keep</aspectratio>
+				<texture></texture>
+			</control>
+            <control type="image" id="32553">
+				<left>860</left>
+                <aligny>center</aligny>
+				<top>400</top>
+				<width>200</width>
+				<height>200</height>
+                <aspectratio>keep</aspectratio>
+				<texture></texture>
+			</control>
+            <control type="image" id="32554">
+				<left>350</left>
+				<top>400</top>
+				<width>215</width>
+				<height>215</height>
+                <aspectratio>keep</aspectratio>
+				<texture></texture>
+			</control>
+            <control type="image" id="32555">
+                <left>750</left>
+                <top>400</top>
+                <width>215</width>
+                <height>215</height>
+                <aspectratio>keep</aspectratio>
+                <texture></texture>
+			</control>
+            <control type="image" id="32556">
+                <left>230</left>
+                <aligny>center</aligny>
+                <top>375</top>
+                <width>250</width>
+                <height>250</height>
+                <aspectratio>keep</aspectratio>
+                <texture></texture>
+			</control>
+            <control type="image" id="32557">
+                <left>520</left>
+                <top>375</top>
+                <width>250</width>
+                <height>250</height>
+                <aspectratio>keep</aspectratio>
+                <texture></texture>
+            </control>
+            <control type="image" id="32558">
+                <left>800</left>
+                <aligny>center</aligny>
+                <top>375</top>
+                <width>250</width>
+                <height>250</height>
+                <aspectratio>keep</aspectratio>
+                <texture></texture>
+            </control>
+            <control type="image" id="32559">
+                <left>520</left>
+                <aligny>center</aligny>
+                <top>400</top>
+                <width>215</width>
+                <height>215</height>
+                <aspectratio>keep</aspectratio>
+                <texture></texture>
+            </control>
+            <!--images en tweet con mencion en respuesta-->
+            <control type="image" id="32569">
+				<left>450</left>
+                <aligny>center</aligny>
+				<top>410</top>
+				<width>200</width>
+				<height>200</height>
+                <aspectratio>keep</aspectratio>
+				<texture></texture>
+			</control>
+            <control type="image" id="32570">
+				<left>630</left>
+				<top>410</top>
+				<width>200</width>
+				<height>200</height>
+                <aspectratio>keep</aspectratio>
+				<texture></texture>
+			</control>
+            <control type="image" id="32571">
+				<left>560</left>
+                <aligny>center</aligny>
+				<top>410</top>
+				<width>200</width>
+				<height>200</height>
+                <aspectratio>keep</aspectratio>
+				<texture></texture>
+			</control>
+            <control type="image" id="32572">
+				<left>770</left>
+                <aligny>center</aligny>
+				<top>410</top>
+				<width>200</width>
+				<height>200</height>
+                <aspectratio>keep</aspectratio>
+				<texture></texture>
+			</control>
+            <control type="image" id="32573">
+				<left>350</left>
+				<top>410</top>
+				<width>200</width>
+				<height>200</height>
+                <aspectratio>keep</aspectratio>
+				<texture></texture>
+			</control>
+            <control type="image" id="32574">
+                <left>850</left>
+                <top>420</top>
+                <width>190</width>
+                <height>190</height>
+                <aspectratio>keep</aspectratio>
+                <texture></texture>
+			</control>
+            <control type="image" id="32575">
+                <left>250</left>
+                <aligny>center</aligny>
+                <top>420</top>
+                <width>190</width>
+                <height>190</height>
+                <aspectratio>keep</aspectratio>
+                <texture></texture>
+			</control>
+            <control type="image" id="32576">
+                <left>450</left>
+                <top>420</top>
+                <width>190</width>
+                <height>190</height>
+                <aspectratio>keep</aspectratio>
+                <texture></texture>
+            </control>
+            <control type="image" id="32577">
+                <left>650</left>
+                <aligny>center</aligny>
+                <top>420</top>
+                <width>190</width>
+                <height>190</height>
+                <aspectratio>keep</aspectratio>
+                <texture></texture>
+            </control>
+            <control type="image" id="32578">
+                <left>540</left>
+                <aligny>center</aligny>
+                <top>410</top>
+                <width>200</width>
+                <height>200</height>
+                <aspectratio>keep</aspectratio>
+                <texture></texture>
+            </control>
+            <control type="image" id="32579">
+                <left>350</left>
+                <aligny>center</aligny>
+                <top>420</top>
+                <width>190</width>
+                <height>190</height>
+                <aspectratio>keep</aspectratio>
+                <texture></texture>
+            </control>
+            <control type="textbox" id="32580">
+				<left>560</left>
+				<top>440</top>
+				<width>500</width>
+				<height>160</height>
+				<font>font20_title</font>
+				<label></label>
+				<align>left</align>
+                <textcolor>floralwhite</textcolor>
+                <scrolltime>200</scrolltime>
+                <autoscroll delay="4000" time="5000" repeat="10000"></autoscroll>
+				<shadowcolor>black</shadowcolor>
+			</control>
+            <control type="fadelabel" id="32581">
+                <left>560</left>
+                <top>410</top>
+                <width>500</width>
+                <height>40</height>
+                <font>font20_title</font>
+                <pauseatend>200</pauseatend>
+                <scrollspeed>20</scrollspeed>
+                <label></label>
+                <aligny>center</aligny>
+                <textcolor>turquoise</textcolor>
+                <scrollout>true</scrollout>
+                <scroll>true</scroll>
+                <shadowcolor>black</shadowcolor>
+			</control>
+            <control type="textbox" id="32517">
+				<left>210</left>
+				<top>120</top>
+				<width>900</width>
+				<height>57</height>
+				<font>font20_title</font>
+				<label></label>
+				<align>left</align>
+                <textcolor>mediumspringgreen</textcolor>
+				<aligny>center</aligny>
+				<shadowcolor>black</shadowcolor>
+			</control>
+            <control type="image" id="32518">
+				<left>110</left>
+				<top>92</top>
+				<width>70</width>
+				<height>70</height>
+				<texture colordiffuse="FF1FFFFFF" border="2"></texture>
+			</control>
+            <control type="button" id="32543">
+                <left>193</left>
+                <top>85</top>
+                <width>200</width>
+                <height>40</height>
+                <font>font13_title</font>
+                <label></label>
+				<align>left</align>
+				<aligny>center</aligny>
+                <textcolor>lightseagreen</textcolor>
+                <shadowcolor>black</shadowcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<ondown>32588</ondown>
+				<onright>32601</onright>
+				<onup>32601</onup>
+				<onleft>32500</onleft>
+				<visible>!IsEmpty(Control.GetLabel(32543))</visible>
+			</control>
+            <control type="image" id="32542">
+				<left>70</left>
+				<top>190</top>
+				<width>30</width>
+				<height>30</height>
+				<texture>MatchCenter/arrowreply.png</texture>
+                <animation effect="slide" start="0" end="0,-30" center="auto" time="2000" delay=2000 tween="bounce" loop="true" condition="true">conditional</animation>
+                <visible>!StringCompare(Control.GetLabel(32518),"")</visible>
+			</control>
+            <control type="image">
+				<left>105</left>
+				<top>87</top>
+				<width>80</width>
+				<height>80</height>
+                <visible>!StringCompare(Control.GetLabel(32518),"")</visible>
+				<texture>MatchCenter/marco_profile.png</texture>
+			</control>
+            <control type="image" id="32508">
+				<left>110</left>
+                <aligny>center</aligny>
+				<top>270</top>
+				<width>450</width>
+				<height>310</height>
+                <aspectratio>keep</aspectratio>
+				<texture></texture>
+			</control>
+            <control type="textbox" id="32509">
+				<left>600</left>
+				<top>320</top>
+				<width>500</width>
+				<height>230</height>
+				<font>font20_title</font>
+				<label></label>
+                <textcolor>floralwhite</textcolor>
+                <scrolltime>200</scrolltime>
+                <autoscroll delay="4000" time="5000" repeat="10000"></autoscroll>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="fadelabel" id="32549">
+				<left>600</left>
+				<top>270</top>
+				<width>500</width>
+				<height>40</height>
+				<font>font20_title</font>
+				<pauseatend>4000</pauseatend>
+				<scrollspeed>60</scrollspeed>
+				<label></label>
+				<aligny>center</aligny>
+				<textcolor>turquoise</textcolor>
+				<scrollout>false</scrollout>
+				<scroll>true</scroll>
+				<shadowcolor>black</shadowcolor>
+			</control>
+            <control type="fadelabel" id="32541">
+                <left>560</left>
+                <top>410</top>
+                <width>500</width>
+                <height>40</height>
+                <font>font20_title</font>
+                <pauseatend>200</pauseatend>
+                <scrollspeed>20</scrollspeed>
+                <label></label>
+                <aligny>center</aligny>
+                <textcolor>turquoise</textcolor>
+                <scrollout>true</scrollout>
+                <scroll>true</scroll>
+                <shadowcolor>black</shadowcolor>
+			</control>
+            <control type="image" id="32506">
+				<left>250</left>
+				<top>300</top>
+				<width>100</width>
+				<height>100</height>
+				<texture></texture>
+			</control>
+            <control type="image">
+				<left>245</left>
+				<top>293</top>
+				<width>111</width>
+				<height>111</height>
+                <visible>!StringCompare(Control.GetLabel(32506),"")</visible>
+				<texture>MatchCenter/marco_profile.png</texture>
+			</control>
+            <control type="textbox" id="32507">
+				<left>272</left>
+				<top>180</top>
+				<width>1000</width>
+				<height>500</height>
+				<font>font20_title</font>
+				<label></label>
+				<align>left</align>
+                <textcolor>red</textcolor>
+				<aligny>center</aligny>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="image">
+				<left>60</left>
+				<top>0</top>
+				<width>1158</width>
+				<height>70</height>
+				<texture colordiffuse="FF12B2E7" border="2">MatchCenter/white70.png</texture>
+			</control>
+            <control type="image">
+				<left>60</left>
+				<top>630</top>
+				<width>1158</width>
+				<height>70</height>
+				<texture colordiffuse="FF12B2E7" border="2">MatchCenter/white70.png</texture>
+			</control>
+            <control type="fadelabel" id="32530">
+				<left>355</left>
+				<top>0</top>
+				<width>490</width>
+				<height>70</height>
+				<font>font13_title</font>
+                <scrollspeed>40</scrollspeed>
+				<label></label>
+				<align>left</align>
+				<aligny>center</aligny>
+                <scrollout>true</scrollout>
+                <scroll>true</scroll>	
+				<shadowcolor>black</shadowcolor>
+			</control>
+            <control type="fadelabel" id="32589">
+				<left>250</left>
+				<top>130</top>
+				<width>900</width>
+				<height>70</height>
+				<font>font13_title</font>
+                <scrollspeed>40</scrollspeed>
+				<label></label>
+				<align>left</align>
+				<aligny>center</aligny>
+                <scrollout>true</scrollout>
+                <scroll>true</scroll>	
+				<shadowcolor>black</shadowcolor>
+			</control>
+            <!--RT y FAV del autor del tweet-->
+            <control type="label" id="32526">
+                <description>RT</description>
+                <posx>936</posx>
+                <posy>300</posy>
+				<top>0</top>
+				<width>100</width>
+				<height>70</height>
+				<font>font13_title</font>
+				<label></label>
+                <aligny>center</aligny>
+                <textcolor>yellow</textcolor>
+				<shadowcolor>black</shadowcolor>
+                <animation effect="zoom" start="0" end="100" center="auto" time="800" delay="1650" tween="elastic">WindowOpen</animation>
+			</control>
+            <control type="label" id="32527">
+                <description>FAV</description>
+                <posx>1030</posx>
+                <posy>300</posy>
+                <top>0</top>
+                <width>100</width>
+                <height>70</height>
+                <font>font13_title</font>
+                <label></label>
+                <aligny>center</aligny>
+                <textcolor>yellow</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <animation effect="zoom" start="50,60" end="100" center="auto" time="800" delay="1650" tween="elastic">WindowOpen</animation>
+			</control>
+            <control type="image" id="32528">
+				<description>RT Icon</description>
+                <left>860</left>
+                <top>-20</top>
+                <width>110</width>
+                <height>110</height>
+				<texture></texture>
+                <aspectratio>keep</aspectratio>
+			</control>
+            <control type="image" id="32529">
+				<description>FAV Icon</description>
+				<left>982</left>
+				<top>6</top>
+				<width>55</width>
+				<height>55</height>
+				<texture></texture>
+			</control>
+            <!--RT-->
+             <control type="image" id="32583">
+				<description>Retweeted icon</description>
+				<left>920</left>
+				<top>15</top>
+				<width>120</width>
+				<height>38</height>
+                <animation effect="slide" start="-900" end="0"  time="1200" delay="400" >WindowOpen</animation>
+				<texture></texture>
+			</control>
+            <control type="image" id="32582">
+				<description>Retweeted Bird</description>
+                <left>845</left>
+                <top>20</top>
+                <width>90</width>
+                <height>90</height>
+				<texture></texture>
+                <aspectratio>keep</aspectratio>
+                <animation effect="slide" start="-900" end="800"  time="2250" delay="400" >WindowOpen</animation>
+                <animation effect="fade" start="0" end="0" >WindowClose</animation>
+			</control>
+            <!--RT y FAV del reweetwado-->
+            <control type="label" id="32531">
+                <description>RT</description>
+                <posx>936</posx>
+                <posy>300</posy>
+				<top>100</top>
+				<width>100</width>
+				<height>70</height>
+				<font>font20_title</font>
+				<label></label>
+                <aligny>center</aligny>
+                <textcolor>yellow</textcolor>
+				<shadowcolor>black</shadowcolor>
+                <animation effect="zoom" start="0" end="100" center="auto" time="800" delay="1650" tween="elastic">WindowOpen</animation>
+			</control>
+            <control type="label" id="32532">
+                <description>FAV</description>
+                <posx>1030</posx>
+                <posy>300</posy>
+                <top>100</top>
+                <width>100</width>
+                <height>70</height>
+                <font>font20_title</font>
+                <label></label>
+                <aligny>center</aligny>
+                <textcolor>yellow</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <animation effect="zoom" start="50,60" end="100" center="auto" time="800" delay="1650" tween="elastic">WindowOpen</animation>
+			</control>
+            <control type="image" id="32533">
+				<description>RT Icon</description>
+                <left>860</left>
+                <top>80</top>
+                <width>110</width>
+                <height>110</height>
+				<texture></texture>
+                <aspectratio>keep</aspectratio>
+			</control>
+            <control type="image" id="32534">
+				<description>FAV Icon</description>
+				<left>982</left>
+				<top>106</top>
+				<width>55</width>
+				<height>55</height>
+				<texture></texture>
+			</control>
+            <control type="image" id="32596">
+                <description>Ciudad</description>
+                <left>850</left>
+                <top>-10</top>
+                <width>90</width>
+                <height>90</height>
+                <texture></texture>
+                <aspectratio>keep</aspectratio>
+            </control>
+            <control type="fadelabel" id="32597">
+                <description>Nombre ciudad</description>
+                <posx>950</posx>
+                <posy>300</posy>
+                <top>10</top>
+                <width>170</width>
+                <height>70</height>
+                <font>font20_title</font>
+                <label></label>
+                <aligny>center</aligny>
+                <scrollout>true</scrollout>
+                <scrollspeed>60</scrollspeed>
+                <scroll>true</scroll>
+                <textcolor>tomato</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <visible>!StringCompare(Control.GetLabel(32597),No.jpg)</visible>
+                <animation effect="zoom" start="50,60" end="100" center="auto" time="800" delay="1650" tween="elastic">WindowOpen</animation>
+			</control>
+            <control type="image" id="32598">
+                <description>Ciudad desconocida</description>
+                <left>950</left>
+                <top>8</top>
+                <width>60</width>
+                <height>60</height>
+                <texture>MatchCenter/interrogante.png</texture>
+                <visible>StringCompare(Control.GetLabel(32597),No.jpg)</visible>
+                <animation effect="zoom" start="50,60" end="100" center="auto" time="800" delay="1650" tween="elastic">WindowOpen</animation>
+                <aspectratio>keep</aspectratio>
+            </control>
+            <!--RT y FAV del mencionado-->
+            <control type="label" id="32535">
+                <description>RT</description>
+                <posx>936</posx>
+                <posy>300</posy>
+				<top>250</top>
+				<width>100</width>
+				<height>70</height>
+				<font>font13_title</font>
+				<label></label>
+                <aligny>center</aligny>
+                <textcolor>yellow</textcolor>
+				<shadowcolor>black</shadowcolor>
+                <animation effect="zoom" start="0" end="100" center="auto" time="800" delay="1650" tween="elastic">WindowOpen</animation>
+			</control>
+            <control type="label" id="32536">
+                <description>FAV</description>
+                <posx>1030</posx>
+                <posy>300</posy>
+                <top>250</top>
+                <width>100</width>
+                <height>70</height>
+                <font>font13_title</font>
+                <label></label>
+                <aligny>center</aligny>
+                <textcolor>yellow</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <animation effect="zoom" start="50,60" end="100" center="auto" time="800" delay="1650" tween="elastic">WindowOpen</animation>
+			</control>
+            <control type="image" id="32537">
+				<description>RT Icon</description>
+                <left>860</left>
+                <top>230</top>
+                <width>110</width>
+                <height>110</height>
+				<texture></texture>
+                <aspectratio>keep</aspectratio>
+			</control>
+            <control type="image" id="32538">
+				<description>FAV Icon</description>
+				<left>982</left>
+				<top>256</top>
+				<width>55</width>
+				<height>55</height>
+				<texture></texture>
+			</control>
+            <!--RT y FAV mencionado en reply tweet-->
+            <control type="label" id="32565">
+                <description>RT</description>
+                <posx>936</posx>
+                <posy>150</posy>
+				<top>250</top>
+				<width>100</width>
+				<height>70</height>
+				<font>font13_title</font>
+				<label></label>
+                <aligny>center</aligny>
+                <textcolor>yellow</textcolor>
+				<shadowcolor>black</shadowcolor>
+                <animation effect="zoom" start="0" end="100" center="auto" time="800" delay="1650" tween="elastic">WindowOpen</animation>
+			</control>
+            <control type="label" id="32566">
+                <description>FAV</description>
+                <posx>1030</posx>
+                <posy>300</posy>
+                <top>250</top>
+                <width>100</width>
+                <height>70</height>
+                <font>font13_title</font>
+                <label></label>
+                <aligny>center</aligny>
+                <textcolor>yellow</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <animation effect="zoom" start="50,60" end="100" center="auto" time="800" delay="1650" tween="elastic">WindowOpen</animation>
+			</control>
+            <control type="image" id="32567">
+				<description>RT Icon</description>
+                <left>860</left>
+                <top>230</top>
+                <width>110</width>
+                <height>110</height>
+				<texture></texture>
+                <aspectratio>keep</aspectratio>
+			</control>
+            <control type="image" id="32568">
+				<description>FAV Icon</description>
+				<left>982</left>
+				<top>256</top>
+				<width>55</width>
+				<height>55</height>
+				<texture></texture>
+			</control>
+			<control type="button">
+				<left>-1920</left>
+				<top>-1080</top>
+				<width>5760</width>
+				<height>3240</height>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onclick>Action(close)</onclick>
+			</control>
+			<control type="button">
+				<description>button overlay to avoid closing in dialog area</description>
+				<left>0</left>
+				<top>0</top>
+				<width>969</width>
+				<height>283</height>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onclick>noop</onclick>
+			</control>
+			<control type="image" id="32503">
+				<description>Twitter logo</description>
+				<left>80</left>
+				<top>0</top>
+				<width>69</width>
+				<height>69</height>
+				<texture></texture>
+			</control>
+            <control type="image" id="32590">
+				<description>Twitter logo2</description>
+				<left>90</left>
+				<top>0</top>
+				<width>69</width>
+				<height>69</height>
+				<texture>MatchCenter/twitterlogo2.png</texture>
+                <visible>StringCompare(Control.GetLabel(32503),"")</visible>
+			</control>
+            <control type="image" id="32587">
+                <left>90</left>
+                <top>90</top>
+                <width>100</width>
+                <height>100</height>
+                <texture></texture>
+            </control>
+            <control type="image">
+                <left>85</left>
+                <top>85</top>
+                <width>110</width>
+                <height>110</height>
+                <visible>!StringCompare(Control.GetLabel(32587),"")</visible>
+                <texture>MatchCenter/marco_profile.png</texture>
+            </control>
+			<control type="radiobutton" id="33502">
+				<left>1220</left>
+				<top>11</top>
+				<width>48</width>
+				<height>48</height>
+				<radiowidth>48</radiowidth>
+				<radioheight>48</radioheight>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<label></label>
+				<animation effect="slide" end="-70,0" time="0" condition="true">Conditional</animation>
+				<textureradioofffocus colordiffuse="EEFFFFFF">MatchCenter/close.png</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="EEFFFFFF">MatchCenter/logo.png</textureradiooffnofocus>
+				<textureradioonfocus colordiffuse="EEFFFFFF">MatchCenter/close.png</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="EEFFFFFF">MatchCenter/logo.png</textureradioonnofocus>
+				<onclick>Action(close)</onclick>
+				<onup>32500</onup>
+				<onleft>32500</onleft>
+				<ondown>32500</ondown>
+				<onright>33526</onright>
+			</control>
+            <control type="textbox" id="32501">
+				<left>110</left>
+				<top>-25</top>
+				<width>1090</width>
+				<height>500</height>
+				<font>font20_title</font>
+				<label></label>
+				<align>left</align>
+                <textcolor>sandybrown</textcolor>
+                <scrolltime>200</scrolltime>
+                <autoscroll delay="4000" time="5000" repeat="10000"></autoscroll>
+				<aligny>center</aligny>
+				<shadowcolor>black</shadowcolor>
+			</control>	
+			<control type="button" id="32500">
+				<left>170</left>
+				<top>0</top>
+				<width>170</width>
+				<height>70</height>
+				<font>font13_title</font>
+				<label></label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<ondown>32601</ondown>
+				<onright>33502</onright>
+				<onup>33502</onup>
+				<onleft>32601</onleft>
+				<visible>!IsEmpty(Control.GetLabel(32500))</visible>
+			</control>
+            <control type="button" id="32588">
+				<left>210</left>
+				<top>85</top>
+				<width>600</width>
+				<height>70</height>
+				<font>font13_title</font>
+				<label></label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<shadowcolor>black</shadowcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<ondown>32547</ondown>
+				<onright>32547</onright>
+				<onup>32543</onup>
+				<onleft>32543</onleft>
+				<visible>!IsEmpty(Control.GetLabel(32588))</visible>
+			</control>
+            <control type="button" id="32547">
+                <left>180</left>
+                <top>90</top>
+                <width>700</width>
+                <height>57</height>
+                <font>font13_title</font>
+                <label></label>
+                <align>left</align>
+                <textcolor>lightseagreen</textcolor>
+                <aligny>center</aligny>
+                <shadowcolor>black</shadowcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<ondown>32548</ondown>
+				<onright>32548</onright>
+				<onup>32588</onup>
+				<onleft>32588</onleft>
+				<visible>!IsEmpty(Control.GetLabel(32547))</visible>
+            </control>
+            <control type="button" id="32548">
+				<left>220</left>
+				<top>120</top>
+				<width>500</width>
+				<height>70</height>
+				<font>font13_title</font>
+				<label></label>
+				<align>left</align>
+                <textcolor>floralwhite</textcolor>
+				<aligny>center</aligny>
+				<shadowcolor>black</shadowcolor>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<ondown>33524</ondown>
+				<onright>33524</onright>
+				<onup>32547</onup>
+				<onleft>32547</onleft>
+				<visible>!IsEmpty(Control.GetLabel(32548))</visible>
+			</control>
+		</control>
+		<control type="button" id="32601">
+			<description>More tweets</description>
+			<left>350</left>
+			<top>70</top>
+			<width>70</width>
+			<height>70</height>
+			<label></label>
+			<texturefocus>MatchCenter/reply.gif</texturefocus>
+			<texturenofocus>MatchCenter/reply.png</texturenofocus>
+			<font>font13</font>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>white</textcolor>
+			<disabledcolor>disabled</disabledcolor>
+			<textoffsetx>7</textoffsetx>
+			<pulseonselect>no</pulseonselect>
+			<onup>32500</onup>
+			<onleft>32500</onleft>
+			<ondown>32543</ondown>
+			<onright>33502</onright>
+            <animation effect="zoom" start="0" end="100" center="auto" time="800"  tween="elastic">unFocus</animation>
+		</control>
+		<!--Busy control-->
+		<control type="image" id="32540">
+			<description>Busy animation</description>
+			<posx>450</posx>
+			<posy>300</posy>
+			<width>120</width>
+			<height>120</height>
+			<texture></texture>
+			<aspectratio>keep</aspectratio>
+
+			<visible>!IsEmpty(Window(home).Property(loading-script-matchcenter-Tweetsacces))</visible>
+		</control>
+		<control type="label">
+			<top>310</top>
+			<left>400</left>
+			<width>650</width>
+			<height>90</height>
+			<font>font13_title</font>
+			<textcolor>FFF0F0F0</textcolor>
+			<aligny>center</aligny>
+			<align>center</align>
+			<label>CARGANDO...</label>
+			<visible>!IsEmpty(Window(home).Property(loading-script-matchcenter-Tweetsacces))</visible>
+		</control>
+        <control type="image" id="33525">
+            <left>410</left>
+            <top>300</top>
+            <width>500</width>
+            <height>300</height>
+            <texture>MatchCenter/giftoguapo.gif</texture>
+            <animation effect="fade" start="100%" end="0%" time="900" condition="Player.HasVideo" >Conditional</animation>
+        </control>
+		<control type="button" id="33524">
+			<description>Busy animation</description>
+			<posx>610</posx>
+			<posy>400</posy>
+			<width>90</width>
+			<height>90</height>
+            <label></label>
+            <visible>!Player.HasVideo</visible>
+            <visible>!Control.IsVisible(33526)</visible>
+			<texturefocus colordiffuse="FF12B2E7">MatchCenter/play_nf.png</texturefocus>
+			<texturenofocus>MatchCenter/play_nf.png</texturenofocus>
+            <animation effect="fade" start="0%" end="100%" time="600" delay="900" condition="!Control.IsVisible(33526)" >Conditional</animation>
+			<ondown>33526</ondown>
+			<onright>33526</onright>
+			<onup>32548</onup>
+			<onleft>32548</onleft>
+		</control>
+        <control type="button" id="33526">
+			<description>Busy animation</description>
+			<posx>610</posx>
+			<posy>500</posy>
+			<width>40</width>
+			<height>40</height>
+            <label></label>
+            <visible>!Player.HasVideo</visible>
+            <visible>!Control.IsVisible(33525)</visible>
+			<texturefocus colordiffuse="FF12B2E7">MatchCenter/play_nf.png</texturefocus>
+			<texturenofocus>MatchCenter/play_nf.png</texturenofocus>
+			<ondown>32548</ondown>
+			<onright>32548</onright>
+			<onup>33524</onup>
+			<onleft>33524</onleft>
+		</control>
+        <control type="image" id="33527">
+            <left>875</left>
+            <top>570</top>
+            <width>20</width>
+            <height>20</height>
+            <texture>MatchCenter/gif.png</texture>
+        </control>
+        <control type="image" id="33528">
+            <left>750</left>
+            <top>470</top>
+            <width>200</width>
+            <height>200</height>
+            <aspectratio>keep</aspectratio>
+            <texture>MatchCenter/periscope1.png</texture>
+            <animation effect="fade" start="0%" end="100%" time="300" delay="900" condition="Control.IsVisible(33524)" >Conditional</animation>
+        </control>
+        <control type="image" id="33529">
+            <left>640</left>
+            <top>500</top>
+            <width>120</width>
+            <height>120</height>
+            <aspectratio>keep</aspectratio>
+            <texture>MatchCenter/periscope1.png</texture>
+            <animation effect="fade" start="0%" end="100%" time="300" delay="900" condition="Control.IsVisible(33526)" >Conditional</animation>
+        </control>
+        <control type="image" id="33531">
+            <left>680</left>
+            <top>540</top>
+            <width>50</width>
+            <height>50</height>
+            <aspectratio>keep</aspectratio>
+            <texture>MatchCenter/vimeo1.png</texture>
+            <animation effect="fade" start="0%" end="100%" time="300" delay="900" condition="Control.IsVisible(33526)" >Conditional</animation>
+        </control>
+        <control type="image" id="33533">
+            <left>680</left>
+            <top>540</top>
+            <width>50</width>
+            <height>50</height>
+            <aspectratio>keep</aspectratio>
+            <texture>MatchCenter/daily1.png</texture>
+            <animation effect="fade" start="0%" end="100%" time="300" delay="900" condition="Control.IsVisible(33526)" >Conditional</animation>
+        </control>
+        <control type="image" id="33535">
+            <left>680</left>
+            <top>540</top>
+            <width>50</width>
+            <height>50</height>
+            <aspectratio>keep</aspectratio>
+            <texture>MatchCenter/youtube1.png</texture>
+            <animation effect="fade" start="0%" end="100%" time="300" delay="900" condition="Control.IsVisible(33526)" >Conditional</animation>
+        </control>
+        <control type="image" id="33537">
+            <left>690</left>
+            <top>580</top>
+            <width>40</width>
+            <height>40</height>
+            <aspectratio>keep</aspectratio>
+            <texture>MatchCenter/vine1.png</texture>
+            <animation effect="fade" start="0%" end="100%" time="300" delay="900" condition="Control.IsVisible(33526)" >Conditional</animation>
+        </control>
+        <control type="image" id="33530">
+            <left>797</left>
+            <top>535</top>
+            <width>90</width>
+            <height>90</height>
+            <aspectratio>keep</aspectratio>
+            <align>center</align>
+            <texture>MatchCenter/vimeo1.png</texture>
+            <animation effect="fade" start="0%" end="100%" time="300" delay="900" condition="Control.IsVisible(33524)" >Conditional</animation>
+        </control>
+        <control type="image" id="33532">
+            <left>805</left>
+            <top>535</top>
+            <width>90</width>
+            <height>90</height>
+            <aspectratio>keep</aspectratio>
+            <align>center</align>
+            <texture>MatchCenter/daily1.png</texture>
+            <animation effect="fade" start="0%" end="100%" time="300" delay="900" condition="Control.IsVisible(33524)" >Conditional</animation>
+        </control>
+        <control type="image" id="33534">
+            <left>805</left>
+            <top>525</top>
+            <width>90</width>
+            <height>90</height>
+            <aspectratio>keep</aspectratio>
+            <align>center</align>
+            <texture>MatchCenter/youtube1.png</texture>
+            <animation effect="fade" start="0%" end="100%" time="300" delay="900" condition="Control.IsVisible(33524)" >Conditional</animation>
+        </control>
+        <control type="image" id="33536">
+            <left>820</left>
+            <top>545</top>
+            <width>60</width>
+            <height>60</height>
+            <aspectratio>keep</aspectratio>
+            <align>center</align>
+            <texture>MatchCenter/vine1.png</texture>
+            <animation effect="fade" start="0%" end="100%" time="300" delay="900" condition="Control.IsVisible(33524)" >Conditional</animation>
+        </control>
+	</controls>
+</window>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window type="window">
+	<depth>0.52</depth>
+ 	<defaultcontrol always="true">32500</defaultcontrol>
+ 	<animation type="WindowOpen" reversible="false">
+		<effect type="zoom" start="80" end="100" center="960,540" delay="160" tween="back" time="240" />
+		<effect type="fade" delay="160" end="100" time="240" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="zoom" start="100" end="80" center="960,540" easing="in" tween="back" time="240" />
+		<effect type="fade" start="100" end="0" time="240" />
+	</animation>
+
+	<controls>
+		<control type="button" id="32501">
+			<left>40</left>
+			<top>670</top>
+			<width>1200</width>
+			<height>40</height>
+			<texturenofocus colordiffuse="gold" border="5">Controls/MenuItemFO.png</texturenofocus>
+			<texturefocus colordiffuse="white" border="5">Controls/MenuItemFO.png</texturefocus>
+		</control>
+		<control type="label" id="32500">
+			<description>Texto</description>
+			<posx>50</posx>
+			<posy>680</posy>
+			<width>1140</width>
+			<height>30</height>
+			<label></label>
+			<font>font13</font>
+			<align>left</align>
+			<textcolor>steelblue</textcolor>
+			<shadowcolor>AA000000</shadowcolor>
+			<scroll>true</scroll>
+		</control>
+		<control type="label" id="32502">
+			<description>Texto</description>
+			<posx>1195</posx>
+			<posy>640</posy>
+			<width>500</width>
+			<height>40</height>
+			<label></label>
+			<font>font13_title</font>
+			<align>left</align>
+			<shadowcolor>AA000000</shadowcolor>
+			<scroll>true</scroll>
+		</control>
+		<control type="image" id="32503">
+			<left>1130</left>
+			<top>620</top>
+			<width>60</width>
+			<height>50</height>
+			<texture></texture>
+		</control>
+	</controls>
+</window>
