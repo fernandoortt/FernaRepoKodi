@@ -1,0 +1,15 @@
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.FernaRepo-Kodi" name="FernaRepo Kodi" version="0.0.1" provider-name="Fernando Ort">
+	<extension point="xbmc.addon.repository" name="FernaRepo Kodi">
+		<info compressed="false">https://raw.githubusercontent.com/fernandoortt/FernaRepoKodi/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/fernandoortt/FernaRepoKodi/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/fernandoortt/FernaRepoKodi/master</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>FernaRepo Kodi. Repositorio de Addons para Kodi de uso particular.</summary>
+   		<description lang="en">Instala los Addons de FernaRepo. Espero que os guste.</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>

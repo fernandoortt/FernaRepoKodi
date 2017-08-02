@@ -1,0 +1,25 @@
+[B]7.20.17[/B]
+In Theaters section added
+
+[B]6.24.17[/B]
+Added support for Trakt
+Added support for Trailers
+Fixes search menu and different minor bugs
+Added new provided and updater old ones
+_____________________________________________
+[B]6.19.17[/B]
+Added support for Real Debrid
+_____________________________________________
+
+[B]4.12.17[/B]
+New HD sources added
+Removed dead links
+Disabled openload sources with captcha codes
+Minor bug fix
+_____________________________________________
+
+[B]4.2.17[/B]
+- Initial Release
+_____________________________________________
+
+Account settings updated

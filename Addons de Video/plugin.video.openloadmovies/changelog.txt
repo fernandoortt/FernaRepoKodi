@@ -1,0 +1,17 @@
+v1.0.0
+Initial Release
+....
+....
+....
+v1.4.0
+Resolve fix
+v1.4.1
+Changed back original source
+v1.4.2
+fix pback
+v1.4.3
+Changed source....again
+v1.4.4
+Error edit
+v1.4.5
+Added multiple site sources in settings

@@ -1,0 +1,3 @@
+versión inicial
+- Actualizados todos los canales y portadas adabtacion para Kodi Jarvis 16.1.
+

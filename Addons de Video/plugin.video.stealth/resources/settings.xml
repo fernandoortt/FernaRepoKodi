@@ -1,0 +1,5 @@
+﻿<settings>
+  <category label="General">
+    <setting id="intro" type="bool" label="[COLOR red]INTRO Video[/COLOR]" default="true" visable="true"/>
+  </category>
+</settings>

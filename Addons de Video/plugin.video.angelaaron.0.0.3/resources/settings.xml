@@ -1,0 +1,8 @@
+<settings>
+	<category label="[COLOR red][B]Tus Listas[/B][/COLOR]">
+		<setting label="[B]URL de la lista M3u[/B]" type="text"  id="online_m3u" default="" />
+		<setting label="[B]Lista M3u Local[/B]" type="file"  id="local_m3u" default="" />	
+		<setting label="[COLOR red][B]URL de la lista Xml[/B][/COLOR]" type="text"  id="online_xml" default="" />		
+		<setting label="[COLOR red][B]Lista Xml Local[/B][/COLOR]" type="file"  id="local_xml" default="" />			
+	</category>
+</settings>
